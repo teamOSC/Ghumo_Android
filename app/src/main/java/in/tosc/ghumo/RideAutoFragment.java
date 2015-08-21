@@ -1,5 +1,9 @@
 package in.tosc.ghumo;
 
+import android.content.Context;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,8 +12,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
 
@@ -56,6 +63,35 @@ public class RideAutoFragment extends Fragment {
             recyclerView.setAdapter(adapter);
         }
 
+        setCurrentLocation();
         return rootView;
+    }
+
+    private void setCurrentLocation(){
+        try {
+            LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
+                    3000, 0, new LocationListener() {
+                        @Override
+                        public void onLocationChanged(Location location) {
+                            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
+                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
+                            mMap.moveCamera(center);
+                            mMap.animateCamera(zoom);
+                        }
+                        @Override
+                        public void onStatusChanged(String provider, int status, Bundle extras) {
+                        }
+                        @Override
+                        public void onProviderEnabled(String provider) {
+                        }
+                        @Override
+                        public void onProviderDisabled(String provider) {
+
+                        }
+                    });
+        } catch (SecurityException e){
+            e.printStackTrace();
+        }
     }
 }
