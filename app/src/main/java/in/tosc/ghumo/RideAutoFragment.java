@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+
 import java.util.ArrayList;
 
 /**
@@ -18,6 +21,8 @@ public class RideAutoFragment extends Fragment {
     private static final String ACTION ="action";
     public static final String BROWSING_TAXI="browsing_taxi";
     public static final String BROWSING_AUTO="browsing_auto";
+
+    private GoogleMap mMap;
 
     RecyclerView recyclerView;
     AutoTaxiAdapter adapter;
@@ -35,6 +40,8 @@ public class RideAutoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_ride_autotaxi, container, false);
+
+        mMap = ((SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map)).getMap();
 
         recyclerView=(RecyclerView) rootView.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
