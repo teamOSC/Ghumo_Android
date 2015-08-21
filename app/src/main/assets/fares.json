@@ -1,1 +1,1352 @@
-[{"waiting_charges": "N", "city": "Ahmedabad", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "7.", "min_fare": "11"}, {"waiting_charges": "30", "city": "Baghpat", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "30", "city": "Bharatpur", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "30", "city": "Bhubaneshwar", "min_dist": "0", "booking_fee": "", "operator": "Taxi", "fare_per_km": "10", "min_fare": "10"}, {"waiting_charges": "N", "city": "Bhubaneshwar", "min_dist": "0", "booking_fee": "", "operator": "Auto", "fare_per_km": "3.", "min_fare": "6"}, {"waiting_charges": "30", "city": "Chandigarh", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "7 ", "min_fare": "14"}, {"waiting_charges": "42", "city": "Chennai", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "12", "min_fare": "25"}, {"waiting_charges": "N", "city": "Davanagere", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "9 ", "min_fare": "18"}, {"waiting_charges": "30", "city": "Delhi", "min_dist": "1", "booking_fee": "", "operator": "Taxi", "fare_per_km": "14", "min_fare": "25"}, {"waiting_charges": "N", "city": "Dharwad", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "10", "min_fare": "15"}, {"waiting_charges": "30", "city": "Ghaziabad", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "30", "city": "Gurgaon", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "6.", "min_fare": "20"}, {"waiting_charges": "4", "city": "Hassan", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "9 ", "min_fare": "17"}, {"waiting_charges": "N", "city": "Indore", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "12", "min_fare": "14"}, {"waiting_charges": "30", "city": "Jind", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "N", "city": "Kolkata", "min_dist": "2", "booking_fee": "", "operator": "Taxi", "fare_per_km": "12", "min_fare": "25"}, {"waiting_charges": "30", "city": "Mahendragarh", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "30", "city": "Meerut", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "45", "city": "Mumbai", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "12", "min_fare": "18"}, {"waiting_charges": "20", "city": "Mysuru", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "13", "min_fare": "25"}, {"waiting_charges": "30", "city": "Navi", "min_dist": "1", "booking_fee": "", "operator": "Mumbai Auto", "fare_per_km": "11", "min_fare": "17"}, {"waiting_charges": "30", "city": "Palwal", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "40", "city": "Puducherry", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "15", "min_fare": "25"}, {"waiting_charges": "30", "city": "Rewari", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "N", "city": "Satara", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "14", "min_fare": "20"}, {"waiting_charges": "N", "city": "Surat", "min_dist": "0", "booking_fee": "", "operator": "Auto", "fare_per_km": "8.", "min_fare": "13"}, {"waiting_charges": "20", "city": "Trivandrum", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "10", "min_fare": "20"}, {"waiting_charges": "N", "city": "Udupi", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": ".1", "min_fare": ".25"}, {"waiting_charges": "N", "city": "Visakhapatnam", "min_dist": "1", "booking_fee": "", "operator": "Taxi", "fare_per_km": "13", "min_fare": "13"}, {"waiting_charges": "30", "city": "Alwar", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "20", "city": "Bengaluru", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "13", "min_fare": "25"}, {"waiting_charges": "30", "city": "Bhiwani", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "30", "city": "Bhubaneshwar", "min_dist": "0", "booking_fee": "", "operator": "AC Taxi", "fare_per_km": "6.", "min_fare": "13"}, {"waiting_charges": "30", "city": "Bulandshahr", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "100", "city": "Chandigarh", "min_dist": "1", "booking_fee": "", "operator": "Taxi", "fare_per_km": "13", "min_fare": "17"}, {"waiting_charges": "42", "city": "Coimbatore", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "12", "min_fare": "25"}, {"waiting_charges": "120", "city": "Delhi", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "30", "city": "Delhi", "min_dist": "1", "booking_fee": "", "operator": "AC Taxi", "fare_per_km": "16", "min_fare": "25"}, {"waiting_charges": "30", "city": "Faridabad", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "30", "city": "Gurgaon", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "6.", "min_fare": "20"}, {"waiting_charges": "36", "city": "Guwahati", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "15", "min_fare": "30"}, {"waiting_charges": "30", "city": "Hyderabad", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "11", "min_fare": "20"}, {"waiting_charges": "30", "city": "Jhajjar", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "30", "city": "Karnal", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "42", "city": "Madurai", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "R ", "min_fare": "R"}, {"waiting_charges": "25", "city": "Mangalore", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "13", "min_fare": "23"}, {"waiting_charges": "30", "city": "Mewat", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "30", "city": "Mumbai", "min_dist": "1", "booking_fee": "", "operator": "Taxi", "fare_per_km": "14", "min_fare": "22"}, {"waiting_charges": "N", "city": "Nagpur", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "11", "min_fare": "14"}, {"waiting_charges": "30", "city": "Noida", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "30", "city": "Panipat", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "20", "city": "Pune", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "12", "min_fare": "18"}, {"waiting_charges": "30", "city": "Rohtak", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "30", "city": "Sonipat", "min_dist": "2", "booking_fee": "", "operator": "Auto", "fare_per_km": "8 ", "min_fare": "25"}, {"waiting_charges": "30", "city": "Thane", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "11", "min_fare": "17"}, {"waiting_charges": "25", "city": "Trivandrum", "min_dist": "5", "booking_fee": "", "operator": "Taxi", "fare_per_km": "9 ", "min_fare": "150"}, {"waiting_charges": "30", "city": "Vijayawada", "min_dist": "1", "booking_fee": "", "operator": "Auto", "fare_per_km": "11", "min_fare": "20"}, {"waiting_charges": "60", "city": "Ahmedabad", "min_dist": "3", "booking_fee": "", "operator": "Hello Taxi", "fare_per_km": "8 ", "min_fare": "99"}, {"waiting_charges": "120", "city": "Ahmedabad", "min_dist": "4", "booking_fee": "", "operator": "Ola Cabs", "fare_per_km": "12", "min_fare": "100"}, {"waiting_charges": "N", "city": "Ahmedabad", "min_dist": "4", "booking_fee": "", "operator": "Taxi For Sure", "fare_per_km": "12", "min_fare": "49"}, {"waiting_charges": "100", "city": "Amritsar", "min_dist": "2", "booking_fee": "20", "operator": "Mega Cabs", "fare_per_km": "25", "min_fare": "55"}, {"waiting_charges": "60", "city": "Aurangabad", "min_dist": "2", "booking_fee": "", "operator": "Speed Cabs", "fare_per_km": "16", "min_fare": "50"}, {"waiting_charges": "100", "city": "Bengaluru", "min_dist": "5", "booking_fee": "", "operator": "Cel Cabs", "fare_per_km": "15", "min_fare": "200"}, {"waiting_charges": "30", "city": "Bengaluru", "min_dist": "1", "booking_fee": "", "operator": "Easy Auto", "fare_per_km": "11", "min_fare": "20"}, {"waiting_charges": "40", "city": "Bengaluru", "min_dist": "4", "booking_fee": "35", "operator": "Mega Cabs", "fare_per_km": "19", "min_fare": "80"}, {"waiting_charges": "120", "city": "Bengaluru", "min_dist": "0", "booking_fee": "", "operator": "Uber Black", "fare_per_km": "18", "min_fare": "12580"}, {"waiting_charges": "N", "city": "Bengaluru", "min_dist": "4", "booking_fee": "", "operator": "Taxi For Sure", "fare_per_km": "14", "min_fare": "49"}, {"waiting_charges": "120", "city": "Chandigarh", "min_dist": "4", "booking_fee": "", "operator": "Ola Cabs", "fare_per_km": "18", "min_fare": "100"}, {"waiting_charges": "N", "city": "Chennai", "min_dist": "5", "booking_fee": "", "operator": "Ola Cabs", "fare_per_km": "10", "min_fare": "99"}, {"waiting_charges": "60", "city": "Chennai", "min_dist": "0", "booking_fee": "", "operator": "UberX", "fare_per_km": "9 ", "min_fare": "40"}, {"waiting_charges": "N", "city": "Chennai", "min_dist": "4", "booking_fee": "", "operator": "Taxi For Sure", "fare_per_km": "15", "min_fare": "49"}, {"waiting_charges": "30", "city": "Delhi", "min_dist": "3", "booking_fee": "40", "operator": "Meru Cabs", "fare_per_km": "23", "min_fare": "69"}, {"waiting_charges": "100", "city": "Delhi", "min_dist": "1", "booking_fee": "50", "operator": "Quick Cabs", "fare_per_km": "12", "min_fare": "12.5"}, {"waiting_charges": "N", "city": "Delhi", "min_dist": "1", "booking_fee": "", "operator": "Mango Cabs", "fare_per_km": "10", "min_fare": "10"}, {"waiting_charges": "100", "city": "Delhi", "min_dist": "1", "booking_fee": "", "operator": "Yo Cabs", "fare_per_km": "15", "min_fare": "15"}, {"waiting_charges": "100", "city": "Delhi", "min_dist": "1", "booking_fee": "50", "operator": "GoCarz", "fare_per_km": "10", "min_fare": "100"}, {"waiting_charges": "120", "city": "Delhi", "min_dist": "8", "booking_fee": "", "operator": "Ola Cabs", "fare_per_km": "18", "min_fare": "200"}, {"waiting_charges": "60", "city": "Delhi", "min_dist": "0", "booking_fee": "", "operator": "UberX", "fare_per_km": "11", "min_fare": "50"}, {"waiting_charges": "120", "city": "Goa", "min_dist": "6", "booking_fee": "", "operator": "Ola Cabs", "fare_per_km": "15", "min_fare": "250"}, {"waiting_charges": "90", "city": "Hyderabad", "min_dist": "1", "booking_fee": "", "operator": "Cel Cabs", "fare_per_km": "14", "min_fare": "225"}, {"waiting_charges": "120", "city": "Hyderabad", "min_dist": "6", "booking_fee": "", "operator": "Ola Cabs", "fare_per_km": "14", "min_fare": "150"}, {"waiting_charges": "60", "city": "Hyderabad", "min_dist": "0", "booking_fee": "", "operator": "UberX", "fare_per_km": "13", "min_fare": "40"}, {"waiting_charges": "120", "city": "Indore", "min_dist": "5", "booking_fee": "", "operator": "Ola Cabs", "fare_per_km": "14", "min_fare": "100"}, {"waiting_charges": "90", "city": "Jaipur", "min_dist": "0", "booking_fee": "", "operator": "My Cabs", "fare_per_km": "15", "min_fare": "25"}, {"waiting_charges": "120", "city": "Jaipur", "min_dist": "5", "booking_fee": "", "operator": "Ola Cabs", "fare_per_km": "14", "min_fare": "99"}, {"waiting_charges": "60", "city": "Kochi", "min_dist": "0", "booking_fee": "", "operator": "UberX", "fare_per_km": "15", "min_fare": "35"}, {"waiting_charges": "60", "city": "Kolkata", "min_dist": "0", "booking_fee": "", "operator": "Uber Black", "fare_per_km": "12", "min_fare": "40"}, {"waiting_charges": "60", "city": "Kolkata", "min_dist": "0", "booking_fee": "", "operator": "Uber Go", "fare_per_km": "9 ", "min_fare": "20"}, {"waiting_charges": "100", "city": "Ludhiana", "min_dist": "2", "booking_fee": "20", "operator": "Mega Cabs", "fare_per_km": "25", "min_fare": "55"}, {"waiting_charges": "120", "city": "Mumbai", "min_dist": "1", "booking_fee": "25", "operator": "Meru Cabs", "fare_per_km": "20", "min_fare": "27"}, {"waiting_charges": "120", "city": "Mumbai", "min_dist": "1", "booking_fee": "", "operator": "Easy Cabs", "fare_per_km": "20", "min_fare": "27"}, {"waiting_charges": "75", "city": "Mumbai", "min_dist": "1", "booking_fee": "", "operator": "Viira Cabs", "fare_per_km": "21", "min_fare": "28"}, {"waiting_charges": "120", "city": "Mumbai", "min_dist": "1", "booking_fee": "", "operator": "TabCab", "fare_per_km": "20", "min_fare": "27"}, {"waiting_charges": "105", "city": "Mumbai", "min_dist": "1", "booking_fee": "", "operator": "Book My Cab AC", "fare_per_km": "17", "min_fare": "26"}, {"waiting_charges": "120", "city": "Mumbai", "min_dist": "0", "booking_fee": "", "operator": "Uber Black", "fare_per_km": "17", "min_fare": "100"}, {"waiting_charges": "30", "city": "Mumbai", "min_dist": "1", "booking_fee": "", "operator": "Cool Cabs", "fare_per_km": "18", "min_fare": "28"}, {"waiting_charges": "N", "city": "Mysuru", "min_dist": "4", "booking_fee": "", "operator": "Taxi For Sure", "fare_per_km": "14", "min_fare": "49"}, {"waiting_charges": "N", "city": "Patna", "min_dist": "1", "booking_fee": "", "operator": "Easy Auto", "fare_per_km": "10", "min_fare": "20"}, {"waiting_charges": "60", "city": "Pune", "min_dist": "3", "booking_fee": "", "operator": "Wings Radio Cabs", "fare_per_km": "18", "min_fare": "80"}, {"waiting_charges": "60", "city": "Pune", "min_dist": "2", "booking_fee": "", "operator": "Speed Cabs", "fare_per_km": "16", "min_fare": "50"}, {"waiting_charges": "", "city": "Pune", "min_dist": "1", "booking_fee": "", "operator": "Easy Ride Cab", "fare_per_km": ".1", "min_fare": ".180"}, {"waiting_charges": "120", "city": "Pune", "min_dist": "0", "booking_fee": "", "operator": "Uber Black", "fare_per_km": "15", "min_fare": "80"}, {"waiting_charges": "N", "city": "Pune", "min_dist": "4", "booking_fee": "", "operator": "Taxi For Sure", "fare_per_km": "12", "min_fare": "49"}, {"waiting_charges": "100", "city": "Trivandrum", "min_dist": "5", "booking_fee": "", "operator": "Cel Cabs", "fare_per_km": "14", "min_fare": "150"}, {"waiting_charges": "120", "city": "Ahmedabad", "min_dist": "4", "booking_fee": "", "operator": "Meru Cabs", "fare_per_km": "20", "min_fare": "100"}, {"waiting_charges": "60", "city": "Ahmedabad", "min_dist": "0", "booking_fee": "", "operator": "Uber Black", "fare_per_km": "11", "min_fare": "20"}, {"waiting_charges": "60", "city": "Ahmedabad", "min_dist": "0", "booking_fee": "", "operator": "UberX", "fare_per_km": "11", "min_fare": "20"}, {"waiting_charges": "60", "city": "Aurangabad", "min_dist": "3", "booking_fee": "", "operator": "Wings Radio Cabs", "fare_per_km": "25", "min_fare": "100"}, {"waiting_charges": "40", "city": "Bengaluru", "min_dist": "4", "booking_fee": "40", "operator": "Meru Cabs", "fare_per_km": "19", "min_fare": "70"}, {"waiting_charges": "40", "city": "Bengaluru", "min_dist": "4", "booking_fee": "", "operator": "Easy Cabs", "fare_per_km": "19", "min_fare": "80"}, {"waiting_charges": "60", "city": "Bengaluru", "min_dist": "1", "booking_fee": "", "operator": "Spot City Taxi", "fare_per_km": "14", "min_fare": "14.5"}, {"waiting_charges": "60", "city": "Bengaluru", "min_dist": "0", "booking_fee": "", "operator": "UberX", "fare_per_km": "15", "min_fare": "50"}, {"waiting_charges": "120", "city": "Bengaluru", "min_dist": "8", "booking_fee": "", "operator": "Ola Cabs", "fare_per_km": "13", "min_fare": "150"}, {"waiting_charges": "100", "city": "Chandigarh", "min_dist": "1", "booking_fee": "", "operator": "Mega Cabs", "fare_per_km": "23", "min_fare": "23"}, {"waiting_charges": "120", "city": "Chandigarh", "min_dist": "0", "booking_fee": "", "operator": "UberX", "fare_per_km": "18", "min_fare": "75"}, {"waiting_charges": "120", "city": "Chennai", "min_dist": "8", "booking_fee": "", "operator": "Meru Cabs", "fare_per_km": "20", "min_fare": "200"}, {"waiting_charges": "30", "city": "Coimbatore", "min_dist": "3", "booking_fee": "", "operator": "Cel Cabs", "fare_per_km": "13", "min_fare": "75"}, {"waiting_charges": "30", "city": "Delhi", "min_dist": "0", "booking_fee": "50", "operator": "Mega Cabs", "fare_per_km": "23", "min_fare": "23"}, {"waiting_charges": "30", "city": "Delhi", "min_dist": "3", "booking_fee": "", "operator": "Easy Cabs", "fare_per_km": "23", "min_fare": "69"}, {"waiting_charges": "N", "city": "Delhi", "min_dist": "1", "booking_fee": "", "operator": "Aarya Cabs", "fare_per_km": "10", "min_fare": "10"}, {"waiting_charges": "60", "city": "Delhi", "min_dist": "1", "booking_fee": "", "operator": "For She", "fare_per_km": "15", "min_fare": "15"}, {"waiting_charges": "100", "city": "Delhi", "min_dist": "1", "booking_fee": "50", "operator": "Yatri Cab", "fare_per_km": "12", "min_fare": "200"}, {"waiting_charges": "120", "city": "Delhi", "min_dist": "0", "booking_fee": "", "operator": "Uber Black", "fare_per_km": "18", "min_fare": "75"}, {"waiting_charges": "N", "city": "Delhi", "min_dist": "4", "booking_fee": "", "operator": "Taxi For Sure", "fare_per_km": "14", "min_fare": "49"}, {"waiting_charges": "60", "city": "Hyderabad", "min_dist": "2", "booking_fee": "25", "operator": "Meru Cabs", "fare_per_km": "21", "min_fare": "40"}, {"waiting_charges": "60", "city": "Hyderabad", "min_dist": "2", "booking_fee": "", "operator": "Easy Cabs", "fare_per_km": "21", "min_fare": "40"}, {"waiting_charges": "120", "city": "Hyderabad", "min_dist": "0", "booking_fee": "", "operator": "Uber Black", "fare_per_km": "18", "min_fare": "50"}, {"waiting_charges": "N", "city": "Hyderabad", "min_dist": "4", "booking_fee": "", "operator": "Taxi For Sure", "fare_per_km": "12", "min_fare": "49"}, {"waiting_charges": "90", "city": "Jaipur", "min_dist": "5", "booking_fee": "", "operator": "Metro Cabs", "fare_per_km": "14", "min_fare": "110"}, {"waiting_charges": "120", "city": "Jaipur", "min_dist": "8", "booking_fee": "30", "operator": "Meru Cabs", "fare_per_km": "18", "min_fare": "200"}, {"waiting_charges": "60", "city": "Jaipur", "min_dist": "0", "booking_fee": "", "operator": "UberX", "fare_per_km": "11", "min_fare": "20"}, {"waiting_charges": "120", "city": "Kolkata", "min_dist": "1", "booking_fee": "30", "operator": "Mega Cabs", "fare_per_km": "21", "min_fare": "21"}, {"waiting_charges": "60", "city": "Kolkata", "min_dist": "0", "booking_fee": "", "operator": "UberX", "fare_per_km": "12", "min_fare": "40"}, {"waiting_charges": "120", "city": "Lucknow", "min_dist": "2", "booking_fee": "", "operator": "Ola Cabs", "fare_per_km": "13", "min_fare": "49"}, {"waiting_charges": "80", "city": "Mangalore", "min_dist": "5", "booking_fee": "", "operator": "Cel Cabs", "fare_per_km": "13", "min_fare": "150"}, {"waiting_charges": "30", "city": "Mumbai", "min_dist": "0", "booking_fee": "", "operator": "Mega Cabs", "fare_per_km": "20", "min_fare": "27"}, {"waiting_charges": "30", "city": "Mumbai", "min_dist": "1", "booking_fee": "", "operator": "Aarya Cabs", "fare_per_km": "15", "min_fare": "22"}, {"waiting_charges": "100", "city": "Mumbai", "min_dist": "1", "booking_fee": "", "operator": "For She", "fare_per_km": "15", "min_fare": "200"}, {"waiting_charges": "", "city": "Mumbai", "min_dist": "1", "booking_fee": "", "operator": "Book My Cab", "fare_per_km": ".1", "min_fare": ".21"}, {"waiting_charges": "120", "city": "Mumbai", "min_dist": "0", "booking_fee": "", "operator": "Ola Cabs", "fare_per_km": "21", "min_fare": "150"}, {"waiting_charges": "60", "city": "Mumbai", "min_dist": "0", "booking_fee": "", "operator": "UberX", "fare_per_km": "15", "min_fare": "50"}, {"waiting_charges": "100", "city": "Mysuru", "min_dist": "5", "booking_fee": "", "operator": "Cel Cabs", "fare_per_km": "15", "min_fare": "200"}, {"waiting_charges": "85", "city": "Nagpur", "min_dist": "8", "booking_fee": "", "operator": "Cel Cabs", "fare_per_km": "14", "min_fare": "200"}, {"waiting_charges": "100", "city": "Pune", "min_dist": "5", "booking_fee": "", "operator": "Cel Cabs", "fare_per_km": "15", "min_fare": "200"}, {"waiting_charges": "60", "city": "Pune", "min_dist": "4", "booking_fee": "", "operator": "TravelTime", "fare_per_km": "16", "min_fare": "80"}, {"waiting_charges": "120", "city": "Pune", "min_dist": "3", "booking_fee": "", "operator": "T Cabs", "fare_per_km": "18", "min_fare": "100"}, {"waiting_charges": "120", "city": "Pune", "min_dist": "5", "booking_fee": "", "operator": "Ola Cabs", "fare_per_km": "12", "min_fare": "100"}, {"waiting_charges": "60", "city": "Pune", "min_dist": "0", "booking_fee": "", "operator": "UberX", "fare_per_km": "12", "min_fare": "30"}, {"waiting_charges": "N", "city": "Surat", "min_dist": "4", "booking_fee": "", "operator": "Taxi For Sure", "fare_per_km": "12", "min_fare": "49"}, {"waiting_charges": "N", "city": "Vadodara", "min_dist": "4", "booking_fee": "", "operator": "Taxi For Sure", "fare_per_km": "12", "min_fare": "49"}]
+[
+  {
+    "waiting_charges": "N",
+    "city": "Ahmedabad",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "7.",
+    "min_fare": "11"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Baghpat",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Bharatpur",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Bhubaneshwar",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "Taxi",
+    "fare_per_km": "10",
+    "min_fare": "10"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Bhubaneshwar",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "3.",
+    "min_fare": "6"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Chandigarh",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "7 ",
+    "min_fare": "14"
+  },
+  {
+    "waiting_charges": "42",
+    "city": "Chennai",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "12",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Davanagere",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "9 ",
+    "min_fare": "18"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Delhi",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Taxi",
+    "fare_per_km": "14",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Dharwad",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "10",
+    "min_fare": "15"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Ghaziabad",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Gurgaon",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "6.",
+    "min_fare": "20"
+  },
+  {
+    "waiting_charges": "4",
+    "city": "Hassan",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "9 ",
+    "min_fare": "17"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Indore",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "12",
+    "min_fare": "14"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Jind",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Kolkata",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Taxi",
+    "fare_per_km": "12",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Mahendragarh",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Meerut",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "45",
+    "city": "Mumbai",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "12",
+    "min_fare": "18"
+  },
+  {
+    "waiting_charges": "20",
+    "city": "Mysuru",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "13",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Navi",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Mumbai Auto",
+    "fare_per_km": "11",
+    "min_fare": "17"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Palwal",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "40",
+    "city": "Puducherry",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "15",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Rewari",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Satara",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "14",
+    "min_fare": "20"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Surat",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8.",
+    "min_fare": "13"
+  },
+  {
+    "waiting_charges": "20",
+    "city": "Trivandrum",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "10",
+    "min_fare": "20"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Udupi",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": ".1",
+    "min_fare": ".25"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Visakhapatnam",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Taxi",
+    "fare_per_km": "13",
+    "min_fare": "13"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Alwar",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "20",
+    "city": "Bengaluru",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "13",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Bhiwani",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Bhubaneshwar",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "AC Taxi",
+    "fare_per_km": "6.",
+    "min_fare": "13"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Bulandshahr",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "100",
+    "city": "Chandigarh",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Taxi",
+    "fare_per_km": "13",
+    "min_fare": "17"
+  },
+  {
+    "waiting_charges": "42",
+    "city": "Coimbatore",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "12",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Delhi",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Delhi",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "AC Taxi",
+    "fare_per_km": "16",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Faridabad",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Gurgaon",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "6.",
+    "min_fare": "20"
+  },
+  {
+    "waiting_charges": "36",
+    "city": "Guwahati",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "15",
+    "min_fare": "30"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Hyderabad",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "11",
+    "min_fare": "20"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Jhajjar",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Karnal",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "42",
+    "city": "Madurai",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "R ",
+    "min_fare": "R"
+  },
+  {
+    "waiting_charges": "25",
+    "city": "Mangalore",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "13",
+    "min_fare": "23"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Mewat",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Mumbai",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Taxi",
+    "fare_per_km": "14",
+    "min_fare": "22"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Nagpur",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "11",
+    "min_fare": "14"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Noida",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Panipat",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "20",
+    "city": "Pune",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "12",
+    "min_fare": "18"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Rohtak",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Sonipat",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "8 ",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Thane",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "11",
+    "min_fare": "17"
+  },
+  {
+    "waiting_charges": "25",
+    "city": "Trivandrum",
+    "min_dist": "5",
+    "booking_fee": "",
+    "operator": "Taxi",
+    "fare_per_km": "9 ",
+    "min_fare": "150"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Vijayawada",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Auto",
+    "fare_per_km": "11",
+    "min_fare": "20"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Ahmedabad",
+    "min_dist": "3",
+    "booking_fee": "",
+    "operator": "Hello Taxi",
+    "fare_per_km": "8 ",
+    "min_fare": "99"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Ahmedabad",
+    "min_dist": "4",
+    "booking_fee": "",
+    "operator": "Ola Cabs",
+    "fare_per_km": "12",
+    "min_fare": "100"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Ahmedabad",
+    "min_dist": "4",
+    "booking_fee": "",
+    "operator": "Taxi For Sure",
+    "fare_per_km": "12",
+    "min_fare": "49"
+  },
+  {
+    "waiting_charges": "100",
+    "city": "Amritsar",
+    "min_dist": "2",
+    "booking_fee": "20",
+    "operator": "Mega Cabs",
+    "fare_per_km": "25",
+    "min_fare": "55"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Aurangabad",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Speed Cabs",
+    "fare_per_km": "16",
+    "min_fare": "50"
+  },
+  {
+    "waiting_charges": "100",
+    "city": "Bengaluru",
+    "min_dist": "5",
+    "booking_fee": "",
+    "operator": "Cel Cabs",
+    "fare_per_km": "15",
+    "min_fare": "200"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Bengaluru",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Easy Auto",
+    "fare_per_km": "11",
+    "min_fare": "20"
+  },
+  {
+    "waiting_charges": "40",
+    "city": "Bengaluru",
+    "min_dist": "4",
+    "booking_fee": "35",
+    "operator": "Mega Cabs",
+    "fare_per_km": "19",
+    "min_fare": "80"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Bengaluru",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "Uber Black",
+    "fare_per_km": "18",
+    "min_fare": "12580"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Bengaluru",
+    "min_dist": "4",
+    "booking_fee": "",
+    "operator": "Taxi For Sure",
+    "fare_per_km": "14",
+    "min_fare": "49"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Chandigarh",
+    "min_dist": "4",
+    "booking_fee": "",
+    "operator": "Ola Cabs",
+    "fare_per_km": "18",
+    "min_fare": "100"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Chennai",
+    "min_dist": "5",
+    "booking_fee": "",
+    "operator": "Ola Cabs",
+    "fare_per_km": "10",
+    "min_fare": "99"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Chennai",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "UberX",
+    "fare_per_km": "9 ",
+    "min_fare": "40"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Chennai",
+    "min_dist": "4",
+    "booking_fee": "",
+    "operator": "Taxi For Sure",
+    "fare_per_km": "15",
+    "min_fare": "49"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Delhi",
+    "min_dist": "3",
+    "booking_fee": "40",
+    "operator": "Meru Cabs",
+    "fare_per_km": "23",
+    "min_fare": "69"
+  },
+  {
+    "waiting_charges": "100",
+    "city": "Delhi",
+    "min_dist": "1",
+    "booking_fee": "50",
+    "operator": "Quick Cabs",
+    "fare_per_km": "12",
+    "min_fare": "12.5"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Delhi",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Mango Cabs",
+    "fare_per_km": "10",
+    "min_fare": "10"
+  },
+  {
+    "waiting_charges": "100",
+    "city": "Delhi",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Yo Cabs",
+    "fare_per_km": "15",
+    "min_fare": "15"
+  },
+  {
+    "waiting_charges": "100",
+    "city": "Delhi",
+    "min_dist": "1",
+    "booking_fee": "50",
+    "operator": "GoCarz",
+    "fare_per_km": "10",
+    "min_fare": "100"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Delhi",
+    "min_dist": "8",
+    "booking_fee": "",
+    "operator": "Ola Cabs",
+    "fare_per_km": "18",
+    "min_fare": "200"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Delhi",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "UberX",
+    "fare_per_km": "11",
+    "min_fare": "50"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Goa",
+    "min_dist": "6",
+    "booking_fee": "",
+    "operator": "Ola Cabs",
+    "fare_per_km": "15",
+    "min_fare": "250"
+  },
+  {
+    "waiting_charges": "90",
+    "city": "Hyderabad",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Cel Cabs",
+    "fare_per_km": "14",
+    "min_fare": "225"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Hyderabad",
+    "min_dist": "6",
+    "booking_fee": "",
+    "operator": "Ola Cabs",
+    "fare_per_km": "14",
+    "min_fare": "150"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Hyderabad",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "UberX",
+    "fare_per_km": "13",
+    "min_fare": "40"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Indore",
+    "min_dist": "5",
+    "booking_fee": "",
+    "operator": "Ola Cabs",
+    "fare_per_km": "14",
+    "min_fare": "100"
+  },
+  {
+    "waiting_charges": "90",
+    "city": "Jaipur",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "My Cabs",
+    "fare_per_km": "15",
+    "min_fare": "25"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Jaipur",
+    "min_dist": "5",
+    "booking_fee": "",
+    "operator": "Ola Cabs",
+    "fare_per_km": "14",
+    "min_fare": "99"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Kochi",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "UberX",
+    "fare_per_km": "15",
+    "min_fare": "35"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Kolkata",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "Uber Black",
+    "fare_per_km": "12",
+    "min_fare": "40"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Kolkata",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "Uber Go",
+    "fare_per_km": "9 ",
+    "min_fare": "20"
+  },
+  {
+    "waiting_charges": "100",
+    "city": "Ludhiana",
+    "min_dist": "2",
+    "booking_fee": "20",
+    "operator": "Mega Cabs",
+    "fare_per_km": "25",
+    "min_fare": "55"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Mumbai",
+    "min_dist": "1",
+    "booking_fee": "25",
+    "operator": "Meru Cabs",
+    "fare_per_km": "20",
+    "min_fare": "27"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Mumbai",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Easy Cabs",
+    "fare_per_km": "20",
+    "min_fare": "27"
+  },
+  {
+    "waiting_charges": "75",
+    "city": "Mumbai",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Viira Cabs",
+    "fare_per_km": "21",
+    "min_fare": "28"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Mumbai",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "TabCab",
+    "fare_per_km": "20",
+    "min_fare": "27"
+  },
+  {
+    "waiting_charges": "105",
+    "city": "Mumbai",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Book My Cab AC",
+    "fare_per_km": "17",
+    "min_fare": "26"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Mumbai",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "Uber Black",
+    "fare_per_km": "17",
+    "min_fare": "100"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Mumbai",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Cool Cabs",
+    "fare_per_km": "18",
+    "min_fare": "28"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Mysuru",
+    "min_dist": "4",
+    "booking_fee": "",
+    "operator": "Taxi For Sure",
+    "fare_per_km": "14",
+    "min_fare": "49"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Patna",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Easy Auto",
+    "fare_per_km": "10",
+    "min_fare": "20"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Pune",
+    "min_dist": "3",
+    "booking_fee": "",
+    "operator": "Wings Radio Cabs",
+    "fare_per_km": "18",
+    "min_fare": "80"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Pune",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Speed Cabs",
+    "fare_per_km": "16",
+    "min_fare": "50"
+  },
+  {
+    "waiting_charges": "",
+    "city": "Pune",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Easy Ride Cab",
+    "fare_per_km": ".1",
+    "min_fare": ".180"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Pune",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "Uber Black",
+    "fare_per_km": "15",
+    "min_fare": "80"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Pune",
+    "min_dist": "4",
+    "booking_fee": "",
+    "operator": "Taxi For Sure",
+    "fare_per_km": "12",
+    "min_fare": "49"
+  },
+  {
+    "waiting_charges": "100",
+    "city": "Trivandrum",
+    "min_dist": "5",
+    "booking_fee": "",
+    "operator": "Cel Cabs",
+    "fare_per_km": "14",
+    "min_fare": "150"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Ahmedabad",
+    "min_dist": "4",
+    "booking_fee": "",
+    "operator": "Meru Cabs",
+    "fare_per_km": "20",
+    "min_fare": "100"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Ahmedabad",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "Uber Black",
+    "fare_per_km": "11",
+    "min_fare": "20"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Ahmedabad",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "UberX",
+    "fare_per_km": "11",
+    "min_fare": "20"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Aurangabad",
+    "min_dist": "3",
+    "booking_fee": "",
+    "operator": "Wings Radio Cabs",
+    "fare_per_km": "25",
+    "min_fare": "100"
+  },
+  {
+    "waiting_charges": "40",
+    "city": "Bengaluru",
+    "min_dist": "4",
+    "booking_fee": "40",
+    "operator": "Meru Cabs",
+    "fare_per_km": "19",
+    "min_fare": "70"
+  },
+  {
+    "waiting_charges": "40",
+    "city": "Bengaluru",
+    "min_dist": "4",
+    "booking_fee": "",
+    "operator": "Easy Cabs",
+    "fare_per_km": "19",
+    "min_fare": "80"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Bengaluru",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Spot City Taxi",
+    "fare_per_km": "14",
+    "min_fare": "14.5"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Bengaluru",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "UberX",
+    "fare_per_km": "15",
+    "min_fare": "50"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Bengaluru",
+    "min_dist": "8",
+    "booking_fee": "",
+    "operator": "Ola Cabs",
+    "fare_per_km": "13",
+    "min_fare": "150"
+  },
+  {
+    "waiting_charges": "100",
+    "city": "Chandigarh",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Mega Cabs",
+    "fare_per_km": "23",
+    "min_fare": "23"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Chandigarh",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "UberX",
+    "fare_per_km": "18",
+    "min_fare": "75"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Chennai",
+    "min_dist": "8",
+    "booking_fee": "",
+    "operator": "Meru Cabs",
+    "fare_per_km": "20",
+    "min_fare": "200"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Coimbatore",
+    "min_dist": "3",
+    "booking_fee": "",
+    "operator": "Cel Cabs",
+    "fare_per_km": "13",
+    "min_fare": "75"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Delhi",
+    "min_dist": "0",
+    "booking_fee": "50",
+    "operator": "Mega Cabs",
+    "fare_per_km": "23",
+    "min_fare": "23"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Delhi",
+    "min_dist": "3",
+    "booking_fee": "",
+    "operator": "Easy Cabs",
+    "fare_per_km": "23",
+    "min_fare": "69"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Delhi",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Aarya Cabs",
+    "fare_per_km": "10",
+    "min_fare": "10"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Delhi",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "For She",
+    "fare_per_km": "15",
+    "min_fare": "15"
+  },
+  {
+    "waiting_charges": "100",
+    "city": "Delhi",
+    "min_dist": "1",
+    "booking_fee": "50",
+    "operator": "Yatri Cab",
+    "fare_per_km": "12",
+    "min_fare": "200"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Delhi",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "Uber Black",
+    "fare_per_km": "18",
+    "min_fare": "75"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Delhi",
+    "min_dist": "4",
+    "booking_fee": "",
+    "operator": "Taxi For Sure",
+    "fare_per_km": "14",
+    "min_fare": "49"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Hyderabad",
+    "min_dist": "2",
+    "booking_fee": "25",
+    "operator": "Meru Cabs",
+    "fare_per_km": "21",
+    "min_fare": "40"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Hyderabad",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Easy Cabs",
+    "fare_per_km": "21",
+    "min_fare": "40"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Hyderabad",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "Uber Black",
+    "fare_per_km": "18",
+    "min_fare": "50"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Hyderabad",
+    "min_dist": "4",
+    "booking_fee": "",
+    "operator": "Taxi For Sure",
+    "fare_per_km": "12",
+    "min_fare": "49"
+  },
+  {
+    "waiting_charges": "90",
+    "city": "Jaipur",
+    "min_dist": "5",
+    "booking_fee": "",
+    "operator": "Metro Cabs",
+    "fare_per_km": "14",
+    "min_fare": "110"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Jaipur",
+    "min_dist": "8",
+    "booking_fee": "30",
+    "operator": "Meru Cabs",
+    "fare_per_km": "18",
+    "min_fare": "200"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Jaipur",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "UberX",
+    "fare_per_km": "11",
+    "min_fare": "20"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Kolkata",
+    "min_dist": "1",
+    "booking_fee": "30",
+    "operator": "Mega Cabs",
+    "fare_per_km": "21",
+    "min_fare": "21"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Kolkata",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "UberX",
+    "fare_per_km": "12",
+    "min_fare": "40"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Lucknow",
+    "min_dist": "2",
+    "booking_fee": "",
+    "operator": "Ola Cabs",
+    "fare_per_km": "13",
+    "min_fare": "49"
+  },
+  {
+    "waiting_charges": "80",
+    "city": "Mangalore",
+    "min_dist": "5",
+    "booking_fee": "",
+    "operator": "Cel Cabs",
+    "fare_per_km": "13",
+    "min_fare": "150"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Mumbai",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "Mega Cabs",
+    "fare_per_km": "20",
+    "min_fare": "27"
+  },
+  {
+    "waiting_charges": "30",
+    "city": "Mumbai",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Aarya Cabs",
+    "fare_per_km": "15",
+    "min_fare": "22"
+  },
+  {
+    "waiting_charges": "100",
+    "city": "Mumbai",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "For She",
+    "fare_per_km": "15",
+    "min_fare": "200"
+  },
+  {
+    "waiting_charges": "",
+    "city": "Mumbai",
+    "min_dist": "1",
+    "booking_fee": "",
+    "operator": "Book My Cab",
+    "fare_per_km": ".1",
+    "min_fare": ".21"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Mumbai",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "Ola Cabs",
+    "fare_per_km": "21",
+    "min_fare": "150"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Mumbai",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "UberX",
+    "fare_per_km": "15",
+    "min_fare": "50"
+  },
+  {
+    "waiting_charges": "100",
+    "city": "Mysuru",
+    "min_dist": "5",
+    "booking_fee": "",
+    "operator": "Cel Cabs",
+    "fare_per_km": "15",
+    "min_fare": "200"
+  },
+  {
+    "waiting_charges": "85",
+    "city": "Nagpur",
+    "min_dist": "8",
+    "booking_fee": "",
+    "operator": "Cel Cabs",
+    "fare_per_km": "14",
+    "min_fare": "200"
+  },
+  {
+    "waiting_charges": "100",
+    "city": "Pune",
+    "min_dist": "5",
+    "booking_fee": "",
+    "operator": "Cel Cabs",
+    "fare_per_km": "15",
+    "min_fare": "200"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Pune",
+    "min_dist": "4",
+    "booking_fee": "",
+    "operator": "TravelTime",
+    "fare_per_km": "16",
+    "min_fare": "80"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Pune",
+    "min_dist": "3",
+    "booking_fee": "",
+    "operator": "T Cabs",
+    "fare_per_km": "18",
+    "min_fare": "100"
+  },
+  {
+    "waiting_charges": "120",
+    "city": "Pune",
+    "min_dist": "5",
+    "booking_fee": "",
+    "operator": "Ola Cabs",
+    "fare_per_km": "12",
+    "min_fare": "100"
+  },
+  {
+    "waiting_charges": "60",
+    "city": "Pune",
+    "min_dist": "0",
+    "booking_fee": "",
+    "operator": "UberX",
+    "fare_per_km": "12",
+    "min_fare": "30"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Surat",
+    "min_dist": "4",
+    "booking_fee": "",
+    "operator": "Taxi For Sure",
+    "fare_per_km": "12",
+    "min_fare": "49"
+  },
+  {
+    "waiting_charges": "N",
+    "city": "Vadodara",
+    "min_dist": "4",
+    "booking_fee": "",
+    "operator": "Taxi For Sure",
+    "fare_per_km": "12",
+    "min_fare": "49"
+  }
+]
