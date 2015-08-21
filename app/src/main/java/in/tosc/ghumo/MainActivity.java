@@ -1,5 +1,6 @@
 package in.tosc.ghumo;
 
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -7,7 +8,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        drawerLayout=(DrawerLayout) findViewById(R.id.drawer_layout);
-        navigationView=(NavigationView) findViewById(R.id.nav_view);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.inflateHeaderView(R.layout.nav_header);
 
         setupDrawerContent(navigationView);
@@ -48,9 +48,10 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
     private void setupDrawerContent(NavigationView navigationView) {
         navigationView.getMenu().findItem(R.id.nav_ride).setChecked(true);
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,new RideFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new RideFragment()).commit();
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -69,30 +70,30 @@ public class MainActivity extends AppCompatActivity {
 
         switch (menuItem.getItemId()) {
             case R.id.nav_ride:
-                fragment=new RideFragment();
+                fragment = new RideFragment();
                 break;
             case R.id.nav_meter:
-                fragment=new MeterFragment();
+                fragment = new MeterFragment();
                 break;
             case R.id.nav_rating:
-                fragment=new RatingFragment();
+                fragment = new RatingFragment();
                 break;
             case R.id.nav_directions:
-                fragment=new DirectionsFragment();
+                fragment = new DirectionsFragment();
                 break;
         }
 
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
-            final android.support.v4.app.FragmentTransaction transaction =fragmentManager.beginTransaction()
+            final android.support.v4.app.FragmentTransaction transaction = fragmentManager.beginTransaction()
                     .replace(R.id.container, fragment);
-            Handler handler=new Handler();
+            Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     transaction.commit();
                 }
-            },350);
+            }, 350);
         }
     }
 }

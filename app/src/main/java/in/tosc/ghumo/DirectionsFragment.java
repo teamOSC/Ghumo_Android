@@ -47,29 +47,27 @@ import com.google.android.gms.maps.model.PolylineOptions;
  */
 public class DirectionsFragment extends Fragment implements RoutingListener, GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks {
 
+    private static final LatLngBounds BOUNDS_JAMAICA = new LatLngBounds(new LatLng(-57.965341647205726, 144.9987719580531),
+            new LatLng(72.77492067739843, -9.998857788741589));
     protected GoogleMap map;
     protected LatLng start;
     protected LatLng end;
+    protected GoogleApiClient mGoogleApiClient;
     AutoCompleteTextView starting;
     AutoCompleteTextView destination;
     ImageView send;
     private String LOG_TAG = "MyActivity";
-    protected GoogleApiClient mGoogleApiClient;
     private PlaceAutoCompleteAdapter mAdapter;
     private ProgressDialog progressDialog;
     private Polyline polyline;
-
-
-    private static final LatLngBounds BOUNDS_JAMAICA= new LatLngBounds(new LatLng(-57.965341647205726, 144.9987719580531),
-            new LatLng(72.77492067739843, -9.998857788741589));
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_directions, container, false);
-        starting=(AutoCompleteTextView) rootView.findViewById(R.id.start);
-        destination=(AutoCompleteTextView) rootView.findViewById(R.id.destination);
-        send=(ImageView) rootView.findViewById(R.id.send);
+        starting = (AutoCompleteTextView) rootView.findViewById(R.id.start);
+        destination = (AutoCompleteTextView) rootView.findViewById(R.id.destination);
+        send = (ImageView) rootView.findViewById(R.id.send);
 
         mGoogleApiClient = new GoogleApiClient.Builder(getActivity())
                 .addApi(Places.GEO_DATA_API)
@@ -141,7 +139,7 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
 
                         }
                     });
-        } catch (SecurityException e){
+        } catch (SecurityException e) {
             e.printStackTrace();
         }
 
@@ -174,7 +172,7 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
 
                         }
                     });
-        } catch (SecurityException e){
+        } catch (SecurityException e) {
             e.printStackTrace();
         }
 
@@ -219,7 +217,7 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
                         // Get the Place object from the buffer.
                         final Place place = places.get(0);
 
-                        start=place.getLatLng();
+                        start = place.getLatLng();
                     }
                 });
 
@@ -251,7 +249,7 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
                         // Get the Place object from the buffer.
                         final Place place = places.get(0);
 
-                        end=place.getLatLng();
+                        end = place.getLatLng();
                     }
                 });
 
@@ -293,9 +291,8 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
 
-                if(end!=null)
-                {
-                    end=null;
+                if (end != null) {
+                    end = null;
                 }
             }
 
@@ -315,35 +312,23 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
         return rootView;
     }
 
-    public void route()
-    {
-        if(start==null || end==null)
-        {
-            if(start==null)
-            {
-                if(starting.getText().length()>0)
-                {
+    public void route() {
+        if (start == null || end == null) {
+            if (start == null) {
+                if (starting.getText().length() > 0) {
                     starting.setError("Choose location from dropdown.");
-                }
-                else
-                {
+                } else {
                     Toast.makeText(getActivity(), "Please choose a starting point.", Toast.LENGTH_SHORT).show();
                 }
             }
-            if(end==null)
-            {
-                if(destination.getText().length()>0)
-                {
+            if (end == null) {
+                if (destination.getText().length() > 0) {
                     destination.setError("Choose location from dropdown.");
-                }
-                else
-                {
-                    Toast.makeText(getActivity(),"Please choose a destination.",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getActivity(), "Please choose a destination.", Toast.LENGTH_SHORT).show();
                 }
             }
-        }
-        else
-        {
+        } else {
             progressDialog = ProgressDialog.show(getActivity(), "Please wait.",
                     "Fetching route information.", true);
             Routing routing = new Routing.Builder()
@@ -360,7 +345,7 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
     public void onRoutingFailure() {
         // The Routing request failed
         progressDialog.dismiss();
-        Toast.makeText(getActivity(),"Something went wrong, Try again", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "Something went wrong, Try again", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -369,8 +354,7 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
     }
 
     @Override
-    public void onRoutingSuccess(PolylineOptions mPolyOptions, Route route)
-    {
+    public void onRoutingSuccess(PolylineOptions mPolyOptions, Route route) {
         progressDialog.dismiss();
         CameraUpdate center = CameraUpdateFactory.newLatLng(start);
         CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
@@ -378,16 +362,16 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
         map.moveCamera(center);
 
 
-        if(polyline!=null)
+        if (polyline != null)
             polyline.remove();
 
-        polyline=null;
+        polyline = null;
         //adds route to the map.
         PolylineOptions polyOptions = new PolylineOptions();
         polyOptions.color(getResources().getColor(R.color.colorPrimaryDark));
         polyOptions.width(10);
         polyOptions.addAll(mPolyOptions.getPoints());
-        polyline=map.addPolyline(polyOptions);
+        polyline = map.addPolyline(polyOptions);
 
         // Start marker
         MarkerOptions options = new MarkerOptions();
@@ -410,7 +394,7 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
-        Log.v(LOG_TAG,connectionResult.toString());
+        Log.v(LOG_TAG, connectionResult.toString());
     }
 
     @Override
