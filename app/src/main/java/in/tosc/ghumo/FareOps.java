@@ -32,6 +32,19 @@ public class FareOps {
         return fares;
     }
 
+    public float calcFare(float kiloMeters, Fare fare) {
+        float totalFare = 0;
+        totalFare += fare.getBooking_fee();
+        totalFare += fare.getMin_fare();
+
+        float chargeableKm = kiloMeters - fare.getMin_dist();
+        chargeableKm = (chargeableKm>0) ? chargeableKm : 0;
+
+        totalFare += chargeableKm * fare.getFare_per_km();
+
+        return totalFare;
+    }
+
     public String getJsonFromAssets (String assetFileName, Context c) {
         String json = null;
         try {
