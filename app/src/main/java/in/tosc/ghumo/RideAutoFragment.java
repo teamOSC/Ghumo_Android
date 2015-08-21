@@ -56,7 +56,6 @@ public class RideAutoFragment extends Fragment {
             recyclerView.setAdapter(adapter);
         }
 
-
         return rootView;
     }
 }
