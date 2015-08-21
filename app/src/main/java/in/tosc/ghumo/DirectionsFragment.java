@@ -112,63 +112,71 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
 
         LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
 
-        locationManager.requestLocationUpdates(
-                LocationManager.NETWORK_PROVIDER, 5000, 0,
-                new LocationListener() {
-                    @Override
-                    public void onLocationChanged(Location location) {
+        try {
+            locationManager.requestLocationUpdates(
+                    LocationManager.NETWORK_PROVIDER, 5000, 0,
+                    new LocationListener() {
+                        @Override
+                        public void onLocationChanged(Location location) {
 
-                        CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(),location.getLongitude()));
-                        CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
+                            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
+                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
 
-                        map.moveCamera(center);
-                        map.animateCamera(zoom);
-                    }
+                            map.moveCamera(center);
+                            map.animateCamera(zoom);
+                        }
 
-                    @Override
-                    public void onStatusChanged(String provider, int status, Bundle extras) {
+                        @Override
+                        public void onStatusChanged(String provider, int status, Bundle extras) {
 
-                    }
+                        }
 
-                    @Override
-                    public void onProviderEnabled(String provider) {
+                        @Override
+                        public void onProviderEnabled(String provider) {
 
-                    }
+                        }
 
-                    @Override
-                    public void onProviderDisabled(String provider) {
+                        @Override
+                        public void onProviderDisabled(String provider) {
 
-                    }
-                });
+                        }
+                    });
+        } catch (SecurityException e){
+            e.printStackTrace();
+        }
 
+        try {
 
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-                3000, 0, new LocationListener() {
-                    @Override
-                    public void onLocationChanged(Location location) {
-                        CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(),location.getLongitude()));
-                        CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
+                    3000, 0, new LocationListener() {
+                        @Override
+                        public void onLocationChanged(Location location) {
+                            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
+                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
 
-                        map.moveCamera(center);
-                        map.animateCamera(zoom);
+                            map.moveCamera(center);
+                            map.animateCamera(zoom);
 
-                    }
+                        }
 
-                    @Override
-                    public void onStatusChanged(String provider, int status, Bundle extras) {
+                        @Override
+                        public void onStatusChanged(String provider, int status, Bundle extras) {
 
-                    }
+                        }
 
-                    @Override
-                    public void onProviderEnabled(String provider) {
+                        @Override
+                        public void onProviderEnabled(String provider) {
 
-                    }
+                        }
 
-                    @Override
-                    public void onProviderDisabled(String provider) {
+                        @Override
+                        public void onProviderDisabled(String provider) {
 
-                    }
-                });
+                        }
+                    });
+        } catch (SecurityException e){
+            e.printStackTrace();
+        }
 
 
 
