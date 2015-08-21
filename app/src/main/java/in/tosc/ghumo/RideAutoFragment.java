@@ -67,6 +67,8 @@ public class RideAutoFragment extends Fragment {
         return rootView;
     }
 
+
+
     private void setCurrentLocation(){
         try {
             LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);

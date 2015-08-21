@@ -34,6 +34,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RatingDetailActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeNormal"/>
 
         <!--<meta-data-->
             <!--android:name="com.google.android.maps.v2.API_KEY"-->
