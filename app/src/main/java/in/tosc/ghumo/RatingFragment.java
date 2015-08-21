@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RatingFragment extends Fragment {
+public class RatingFragment extends android.support.v4.app.Fragment {
 
 
     public RatingFragment() {

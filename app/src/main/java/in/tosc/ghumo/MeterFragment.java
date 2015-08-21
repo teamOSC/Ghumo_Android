@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MeterFragment extends Fragment {
+public class MeterFragment extends android.support.v4.app.Fragment {
 
 
     public MeterFragment() {

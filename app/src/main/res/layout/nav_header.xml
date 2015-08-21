@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="280dp"
-    android:background="#009688">
+    android:layout_height="250dp"
+    android:background="@color/colorPrimary">
 
     <TextView
         android:layout_width="wrap_content"
@@ -10,5 +10,6 @@
         android:text="Ghoomo"
         android:layout_gravity="bottom|left"
         android:textSize="20sp"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        android:textColor="@android:color/white"/>
 </FrameLayout>
