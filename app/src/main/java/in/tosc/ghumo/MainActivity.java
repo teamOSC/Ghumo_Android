@@ -77,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nav_rating:
                 fragment=new RatingFragment();
                 break;
+            case R.id.nav_directions:
+                fragment=new DirectionsFragment();
+                break;
         }
 
         if (fragment != null) {

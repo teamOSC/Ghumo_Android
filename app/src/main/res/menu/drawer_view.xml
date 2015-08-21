@@ -14,5 +14,9 @@
         <item
             android:id="@+id/nav_rating"
             android:title="Rating" />
+
+        <item
+            android:id="@+id/nav_directions"
+            android:title="Directions" />
     </group>
 </menu>
