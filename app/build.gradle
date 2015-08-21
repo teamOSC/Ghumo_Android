@@ -11,7 +11,22 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    lintOptions {
+        abortOnError false
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('debug.jks')
+            storePassword "ghumoapp"
+            keyAlias "ghumo"
+            keyPassword "ghumoapp"
+        }
+    }
     buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
