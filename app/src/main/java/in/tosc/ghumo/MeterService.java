@@ -13,6 +13,9 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 
+import in.tosc.ghumo.fetchdata.FareOps;
+import in.tosc.ghumo.pojos.Fare;
+
 public class MeterService extends Service {
     public LocationManager locationManager;
     public Location lastLocation = null;
@@ -38,7 +41,22 @@ public class MeterService extends Service {
             @Override
             public void onLocationChanged(Location location) {
                 Log.d("Location", location.getLatitude() + "  " + location.getLongitude());
-
+                if (lastLocation == null) {
+                    lastLocation = location;
+                }
+                distance += lastLocation.distanceTo(location) / 1000;
+                lastLocation = location;
+                Fare autoFare = new Fare(
+                        0,
+                        "Delhi",
+                        2,
+                        0,
+                        "Auto",
+                        9,
+                        25
+                );
+                float totalFare = FareOps.calcFare(distance, autoFare);
+                Log.d("Location", "Km = " + distance + " Fare = " + totalFare);
             }
 
             @Override
@@ -88,5 +106,6 @@ public class MeterService extends Service {
             //Nothing to do here
         }
     }
+
 
 }
