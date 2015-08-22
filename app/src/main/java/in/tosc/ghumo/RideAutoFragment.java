@@ -59,10 +59,11 @@ public class RideAutoFragment extends Fragment {
         if (getArguments().getString(ACTION).equals(BROWSING_AUTO)) {
             //do auto stuff
             ArrayList<Auto> autoList =new ArrayList<>();
-            autoList.add(new Auto("DL 3B 6465","3 Kms"));
-            autoList.add(new Auto("DL 3B 6465","3 Kms"));
-            autoList.add(new Auto("DL 3B 6465","3 Kms"));
-            autoList.add(new Auto("DL 3B 6465","3 Kms"));
+            autoList.add(new Auto("DL 1RL 2720","1.13 Kms"));
+            autoList.add(new Auto("DL 1RP 0579","1.28 Kms"));
+            autoList.add(new Auto("DL 1RT 0541","2.24 Kms"));
+            autoList.add(new Auto("DL 1RN 5133","2.90 Kms"));
+            autoList.add(new Auto("DL 1RT 2823","3.52 Kms"));
             autoAdapter = new AutoAdapter(getActivity(),autoList);
             recyclerView.setAdapter(autoAdapter);
         } else {
