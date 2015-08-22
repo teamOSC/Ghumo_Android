@@ -26,7 +26,7 @@ public class MeterFragment extends android.support.v4.app.Fragment {
     ScrollingImageView image1,image2;
     View scrollingFrame;
     ImageView van;
-    TimelyView timelyView;
+    TimelyView timelyView11,timelyView12,timelyView13,timelyView14,timelyView21,timelyView22,timelyView23,timelyView24;
     com.nineoldandroids.animation.ObjectAnimator objectAnimator;
 
     @Override
@@ -38,7 +38,14 @@ public class MeterFragment extends android.support.v4.app.Fragment {
         image1=(ScrollingImageView) rootView.findViewById(R.id.scollingImage1);
         image2=(ScrollingImageView) rootView.findViewById(R.id.scollingImage2);
         van=(ImageView) rootView.findViewById(R.id.van);
-        timelyView=(TimelyView) rootView.findViewById(R.id.timelyView);
+        timelyView11=(TimelyView) rootView.findViewById(R.id.timelyView11);
+        timelyView12=(TimelyView) rootView.findViewById(R.id.timelyView12);
+        timelyView13=(TimelyView) rootView.findViewById(R.id.timelyView13);
+        timelyView14=(TimelyView) rootView.findViewById(R.id.timelyView14);
+        timelyView21=(TimelyView) rootView.findViewById(R.id.timelyView21);
+        timelyView22=(TimelyView) rootView.findViewById(R.id.timelyView22);
+        timelyView23=(TimelyView) rootView.findViewById(R.id.timelyView23);
+        timelyView24=(TimelyView) rootView.findViewById(R.id.timelyView24);
 
         Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
@@ -74,7 +81,7 @@ public class MeterFragment extends android.support.v4.app.Fragment {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                objectAnimator=timelyView.animate(8,9);
+                objectAnimator=timelyView11.animate(8,9);
                 objectAnimator.setDuration(1000);
                 objectAnimator.start();
             }

@@ -48,14 +48,75 @@
             android:layout_weight="1"
             android:text="Reset" />
     </LinearLayout>
-        <com.github.adnansm.timelytextview.TimelyView
-            android:id="@+id/timelyView"
-            android:layout_width="wrap_content"
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="20sp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            />
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+        <com.github.adnansm.timelytextview.TimelyView
+            android:id="@+id/timelyView11"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textSize="10sp" />
+            <com.github.adnansm.timelytextview.TimelyView
+                android:id="@+id/timelyView12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="."
+                android:textSize="23sp"/>
+            <com.github.adnansm.timelytextview.TimelyView
+                android:id="@+id/timelyView13"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="20sp" />
+            <com.github.adnansm.timelytextview.TimelyView
+                android:id="@+id/timelyView14"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+            <com.github.adnansm.timelytextview.TimelyView
+                android:id="@+id/timelyView21"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="20sp" />
+            <com.github.adnansm.timelytextview.TimelyView
+                android:id="@+id/timelyView22"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="."
+                android:textSize="23sp"/>
+            <com.github.adnansm.timelytextview.TimelyView
+                android:id="@+id/timelyView23"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="20sp" />
+            <com.github.adnansm.timelytextview.TimelyView
+                android:id="@+id/timelyView24"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textSize="20sp" />
+        </LinearLayout>
+
 
     </LinearLayout>
 
