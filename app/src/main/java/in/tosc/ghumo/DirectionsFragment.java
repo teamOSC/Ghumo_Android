@@ -44,7 +44,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
+import java.util.ArrayList;
+
 import in.tosc.ghumo.fetchdata.FareOps;
+import in.tosc.ghumo.pojos.Fare;
 import in.tosc.ghumo.widgets.DividerItemDecoration;
 
 /**
@@ -337,7 +340,7 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
                 recyclerView = (RecyclerView) dialog.findViewById(R.id.recycler_view);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                 recyclerView.setAdapter(new DialogAdapter(route));
-                recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL_LIST,R.drawable.item_divider_black));
+                recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST, R.drawable.item_divider_black));
                 dialog.show();
             }
         });
@@ -368,6 +371,7 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
     public class DialogAdapter extends RecyclerView.Adapter<DialogAdapter.ViewHolder>{
 
         private Route route;
+        private ArrayList<Fare> list = FareOps.getFares(getActivity());
 
         public DialogAdapter(Route abc){
             route = abc;
@@ -383,14 +387,14 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
         @Override
         public void onBindViewHolder(DialogAdapter.ViewHolder holder, int position) {
 
-            holder.operator.setText(FareOps.getFares(getActivity()).get(position).getOperator());
-            holder.estimate.setText(String.valueOf(FareOps.calcFare((Float.valueOf(String.valueOf(route.getLength()/1000))), FareOps.getFares(getActivity()).get(position))));
+            holder.operator.setText(list.get(position).getOperator());
+            holder.estimate.setText(String.valueOf(FareOps.calcFare((Float.valueOf(String.valueOf(route.getLength()/1000))), list.get(position))));
 
         }
 
         @Override
         public int getItemCount() {
-            return FareOps.getFares(getActivity()).size();
+            return list.size();
         }
 
         public class ViewHolder extends RecyclerView.ViewHolder{
