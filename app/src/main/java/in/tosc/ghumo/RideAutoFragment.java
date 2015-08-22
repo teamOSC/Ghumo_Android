@@ -23,6 +23,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.ArrayList;
 
 import in.tosc.ghumo.pojos.Auto;
+import in.tosc.ghumo.widgets.DividerItemDecoration;
 
 /**
  * Created by naman on 22/08/15.
@@ -59,13 +60,21 @@ public class RideAutoFragment extends Fragment {
         if (getArguments().getString(ACTION).equals(BROWSING_AUTO)) {
             //do auto stuff
             ArrayList<Auto> autoList =new ArrayList<>();
-            autoList.add(new Auto("DL 1RL 2720","1.13 Kms"));
+            autoList.add(new Auto("DL 1RL 2720","1.12.3f Kms"));
             autoList.add(new Auto("DL 1RP 0579","1.28 Kms"));
             autoList.add(new Auto("DL 1RT 0541","2.24 Kms"));
-            autoList.add(new Auto("DL 1RN 5133","2.90 Kms"));
+            autoList.add(new Auto("DL 1RN 512.3f3","2.90 Kms"));
             autoList.add(new Auto("DL 1RT 2823","3.52 Kms"));
             autoAdapter = new AutoAdapter(getActivity(),autoList);
             recyclerView.setAdapter(autoAdapter);
+            recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL_LIST,R.drawable.item_divider_black));
+
+            addToMap("28.542,77.259", "");
+            addToMap("28.554,77.269","");
+            addToMap("28.542,77.244","");
+            addToMap("28.558,77.245","");
+            addToMap("28.5422,77.234","");
+
         } else {
             //do taxi stuff
 
@@ -74,7 +83,7 @@ public class RideAutoFragment extends Fragment {
         }
 
         setCurrentLocation();
-        addToMap("28.6139,77.2090","");
+
         return rootView;
     }
 
@@ -82,7 +91,7 @@ public class RideAutoFragment extends Fragment {
     private void setCurrentLocation() {
 
         CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(28.54, 77.27));
-        CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
+        CameraUpdate zoom = CameraUpdateFactory.zoomTo(12.3f);
 
         mMap.moveCamera(center);
         mMap.animateCamera(zoom);
@@ -97,7 +106,7 @@ public class RideAutoFragment extends Fragment {
                         public void onLocationChanged(Location location) {
 
                             CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
-                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
+                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(12.3f);
 
                             mMap.moveCamera(center);
                             mMap.animateCamera(zoom);
@@ -129,7 +138,7 @@ public class RideAutoFragment extends Fragment {
                         @Override
                         public void onLocationChanged(Location location) {
                             CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
-                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
+                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(12.3f);
 
                             mMap.moveCamera(center);
                             mMap.animateCamera(zoom);
