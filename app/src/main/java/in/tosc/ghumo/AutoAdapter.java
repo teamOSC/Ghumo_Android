@@ -1,10 +1,13 @@
 package in.tosc.ghumo;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -48,18 +51,23 @@ public class AutoAdapter extends RecyclerView.Adapter<AutoAdapter.ItemHolder> {
     public class ItemHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         protected TextView number,distance;
+        protected ImageView call;
 
         public ItemHolder(View view) {
             super(view);
 
             number=(TextView) view.findViewById(R.id.number);
             distance=(TextView) view.findViewById(R.id.distance);
+            call=(ImageView) view.findViewById(R.id.call);
 
-            view.setOnClickListener(this);
+            call.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
+            Intent intent=new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:" + "9867457644"));
+            mContext.startActivity(intent);
 
         }
 
