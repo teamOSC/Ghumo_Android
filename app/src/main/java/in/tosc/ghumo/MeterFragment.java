@@ -1,8 +1,12 @@
 package in.tosc.ghumo;
 
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -22,7 +26,7 @@ import in.tosc.ghumo.pojos.Fare;
 
 import in.tosc.ghumo.widgets.ScrollingImageView;
 
-public class MeterFragment extends android.support.v4.app.Fragment {
+public class MeterFragment extends android.support.v4.app.Fragment{
 
     Button start, stop, reset;
     ScrollingImageView image1,image2;
@@ -112,4 +116,31 @@ public class MeterFragment extends android.support.v4.app.Fragment {
         image1.stop();
         image2.stop();
     }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        LocalBroadcastManager.getInstance(getContext().getApplicationContext()).unregisterReceiver(mMessageReceiver);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        LocalBroadcastManager.getInstance(getContext().getApplicationContext()).registerReceiver(
+                mMessageReceiver, new IntentFilter("fare_update"));
+    }
+
+
+    private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            Float distance = intent.getFloatExtra("distance", 0);
+            Float fare = intent.getFloatExtra("fare", 0);
+            Log.d("Location", "Km = " + distance + " Fare = " + fare);
+        }
+    };
+
+
 }

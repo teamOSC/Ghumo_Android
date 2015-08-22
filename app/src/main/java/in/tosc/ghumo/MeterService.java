@@ -11,6 +11,7 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 import in.tosc.ghumo.fetchdata.FareOps;
@@ -19,7 +20,7 @@ import in.tosc.ghumo.pojos.Fare;
 public class MeterService extends Service {
     public LocationManager locationManager;
     public Location lastLocation = null;
-    public Float distance = (float) 0.0, finalKilometers = (float) 0, finalFare = (float) 0;
+    public Float distance = (float) 0.0;
     public Criteria criteria;
     LocationListener locLis;
 
@@ -33,9 +34,11 @@ public class MeterService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        distance = (float) 0.0;
         criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        final Fare autoFare = ((GhumoApp) getApplication()).getFare();
 
         locLis = new LocationListener() {
             @Override
@@ -46,9 +49,12 @@ public class MeterService extends Service {
                 }
                 distance += lastLocation.distanceTo(location) / 1000;
                 lastLocation = location;
-                Fare autoFare = ((GhumoApp) getApplication()).getFare();
                 float totalFare = FareOps.calcFare(distance, autoFare);
-                Log.d("Location", "Km = " + distance + " Fare = " + totalFare);
+
+                Intent fareIntent = new Intent("fare_update");
+                fareIntent.putExtra("fare", totalFare);
+                fareIntent.putExtra("distance", distance);
+                LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(fareIntent);
             }
 
             @Override
