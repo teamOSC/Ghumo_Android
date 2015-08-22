@@ -61,16 +61,17 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:paddingTop="20dp">
         <com.github.adnansm.timelytextview.TimelyView
             android:id="@+id/timelyView11"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:textSize="10sp" />
             <com.github.adnansm.timelytextview.TimelyView
                 android:id="@+id/timelyView12"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:textSize="20sp" />
             <TextView
                 android:layout_width="wrap_content"
@@ -79,32 +80,54 @@
                 android:textSize="23sp"/>
             <com.github.adnansm.timelytextview.TimelyView
                 android:id="@+id/timelyView13"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:textSize="20sp" />
             <com.github.adnansm.timelytextview.TimelyView
                 android:id="@+id/timelyView14"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:textSize="20sp" />
-        </LinearLayout>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KMs"
+                android:textSize="16sp"
+                android:layout_gravity="bottom"/>
+        </LinearLayout>
+        <View
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#22000000"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="10dp"
+            android:paddingTop="15dp"
             android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ "
+                android:textSize="45sp"
+                android:paddingRight="10dp"
+                android:fontFamily="sans-serif-thin"
+                android:layout_gravity="bottom"/>
+
             <com.github.adnansm.timelytextview.TimelyView
                 android:id="@+id/timelyView21"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:textSize="20sp" />
             <com.github.adnansm.timelytextview.TimelyView
                 android:id="@+id/timelyView22"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:textSize="20sp" />
             <TextView
                 android:layout_width="wrap_content"
@@ -113,13 +136,13 @@
                 android:textSize="23sp"/>
             <com.github.adnansm.timelytextview.TimelyView
                 android:id="@+id/timelyView23"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:textSize="20sp" />
             <com.github.adnansm.timelytextview.TimelyView
                 android:id="@+id/timelyView24"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:textSize="20sp" />
         </LinearLayout>
 
