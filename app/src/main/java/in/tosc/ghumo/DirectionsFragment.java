@@ -45,6 +45,7 @@ import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 import in.tosc.ghumo.fetchdata.FareOps;
+import in.tosc.ghumo.widgets.DividerItemDecoration;
 
 /**
  * Created by naman on 22/08/15.
@@ -336,6 +337,7 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
                 recyclerView = (RecyclerView) dialog.findViewById(R.id.recycler_view);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                 recyclerView.setAdapter(new DialogAdapter(route));
+                recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL_LIST,R.drawable.item_divider_black));
                 dialog.show();
             }
         });
