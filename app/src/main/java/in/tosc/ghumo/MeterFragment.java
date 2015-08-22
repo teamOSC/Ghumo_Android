@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,15 +39,22 @@ public class MeterFragment extends android.support.v4.app.Fragment {
             fareString.add(fare.getCity() + ", " + fare.getOperator());
         }
 
+        Log.d("Size", fareString.size() + "");
+
         ArrayAdapter<String> adapter = new ArrayAdapter<>
                 (getActivity(), android.R.layout.select_dialog_item, fareString);
         spinner.setAdapter(adapter);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
 
-        spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 ((GhumoApp) getActivity().getApplication()).setFare(list.get(i));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
             }
         });
 

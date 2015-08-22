@@ -1,6 +1,7 @@
 package in.tosc.ghumo.fetchdata;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.google.gson.Gson;
 
@@ -25,7 +26,13 @@ public class FareOps {
             JSONArray fareArr = new JSONArray(jsonString);
             Gson gson = new Gson();
             for (int i = 0; i < fareArr.length(); i++) {
-                fares.add(gson.fromJson((fareArr.getJSONObject(i)).toString(), Fare.class));
+                if(fareArr.getJSONObject(i).getString("city").toUpperCase().contains("DELHI")) {
+                    try {
+                        fares.add(gson.fromJson((fareArr.getJSONObject(i)).toString(), Fare.class));
+                    } catch (Exception e) {
+                        Log.d("Son,", "you disappoint ",e);
+                    }
+                }
             }
         } catch (JSONException e) {
             e.printStackTrace();
