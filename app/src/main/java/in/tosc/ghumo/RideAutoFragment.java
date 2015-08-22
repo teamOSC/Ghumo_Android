@@ -70,7 +70,7 @@ public class RideAutoFragment extends Fragment {
         if (getArguments().getString(ACTION).equals(BROWSING_AUTO)) {
             //do auto stuff
             ArrayList<Auto> autoList =new ArrayList<>();
-            autoList.add(new Auto("DL 1RL 2720","1.12.3f Kms"));
+            autoList.add(new Auto("DL 1RL 2720","1.12 Kms"));
             autoList.add(new Auto("DL 1RP 0579","1.28 Kms"));
             autoList.add(new Auto("DL 1RT 0541","2.24 Kms"));
             autoList.add(new Auto("DL 1RN 512.3f3","2.90 Kms"));
@@ -121,6 +121,7 @@ public class RideAutoFragment extends Fragment {
 
                     taxiAdapter = new TaxiAdapter(getActivity(),cabs);
                     recyclerView.setAdapter(taxiAdapter);
+                    recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL_LIST,R.drawable.item_divider_black));
                 }
 
                 @Override
