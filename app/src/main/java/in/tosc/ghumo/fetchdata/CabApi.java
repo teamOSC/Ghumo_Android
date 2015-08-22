@@ -20,7 +20,7 @@ public interface CabApi {
     String BASE_URL = "http://128.199.128.227:9057/api";
 
     @GET("/newcabs")
-    void getNewsForTopic(
+    void getCabs(
             @Query("lat") float lat,
             @Query("lng") float lng,
             Callback<List<CabOperator>> callback);
