@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
-import android.os.Handler;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -18,21 +17,16 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.TranslateAnimation;
-import android.widget.Button;
-import android.widget.ImageView;
-
-import com.github.adnansm.timelytextview.TimelyView;
-import com.nineoldandroids.animation.ObjectAnimator;
-
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
-import java.text.DecimalFormat;
 import com.github.adnansm.timelytextview.TimelyView;
+import com.nineoldandroids.animation.ObjectAnimator;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import in.tosc.ghumo.fetchdata.FareOps;
