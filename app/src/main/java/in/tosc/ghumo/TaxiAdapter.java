@@ -9,17 +9,17 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import in.tosc.ghumo.pojos.Taxi;
+import in.tosc.ghumo.pojos.Cab;
 
 /**
  * Created by naman on 22/08/15.
  */
 public class TaxiAdapter extends RecyclerView.Adapter<TaxiAdapter.ItemHolder> {
 
-    private ArrayList<Taxi> arraylist;
+    private ArrayList<Cab> arraylist;
     private Activity mContext;
 
-    public TaxiAdapter(Activity context, ArrayList<Taxi> arrayList) {
+    public TaxiAdapter(Activity context, ArrayList<Cab> arrayList) {
         this.mContext = context;
         this.arraylist = arrayList;
 
