@@ -9,25 +9,25 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import in.tosc.ghumo.pojos.Taxi;
+
 /**
  * Created by naman on 22/08/15.
  */
-public class AutoTaxiAdapter extends RecyclerView.Adapter<AutoTaxiAdapter.ItemHolder> {
+public class TaxiAdapter extends RecyclerView.Adapter<TaxiAdapter.ItemHolder> {
 
-    private ArrayList arraylist;
+    private ArrayList<Taxi> arraylist;
     private Activity mContext;
-    private int layoutID;
 
-    public AutoTaxiAdapter(Activity context, int layoutResID, ArrayList arrayList) {
+    public TaxiAdapter(Activity context, ArrayList<Taxi> arrayList) {
         this.mContext = context;
-        this.layoutID = layoutResID;
         this.arraylist = arrayList;
 
     }
 
     @Override
     public ItemHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(layoutID, null);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_ride_taxi, null);
         ItemHolder ml = new ItemHolder(v);
         return ml;
     }
@@ -65,6 +65,7 @@ public class AutoTaxiAdapter extends RecyclerView.Adapter<AutoTaxiAdapter.ItemHo
 
 
 }
+
 
 
 

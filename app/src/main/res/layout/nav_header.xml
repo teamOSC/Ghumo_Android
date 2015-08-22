@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|left"
         android:padding="10dp"
-        android:text="Ghoomo"
+        android:text="Ghumo"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
 </FrameLayout>
