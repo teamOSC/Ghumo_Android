@@ -67,24 +67,70 @@ public class RideAutoFragment extends Fragment {
 
 
     private void setCurrentLocation() {
+
+        CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(28.54, 77.27));
+        CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
+
+        mMap.moveCamera(center);
+        mMap.animateCamera(zoom);
+
+        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+
         try {
-            LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-                    3000, 0, new LocationListener() {
+            locationManager.requestLocationUpdates(
+                    LocationManager.NETWORK_PROVIDER, 1000, 0,
+                    new LocationListener() {
                         @Override
                         public void onLocationChanged(Location location) {
+
                             CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
                             CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
+
                             mMap.moveCamera(center);
                             mMap.animateCamera(zoom);
                         }
 
                         @Override
                         public void onStatusChanged(String provider, int status, Bundle extras) {
+
                         }
 
                         @Override
                         public void onProviderEnabled(String provider) {
+
+                        }
+
+                        @Override
+                        public void onProviderDisabled(String provider) {
+
+                        }
+                    });
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        }
+
+        try {
+
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
+                    1000, 0, new LocationListener() {
+                        @Override
+                        public void onLocationChanged(Location location) {
+                            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
+                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
+
+                            mMap.moveCamera(center);
+                            mMap.animateCamera(zoom);
+
+                        }
+
+                        @Override
+                        public void onStatusChanged(String provider, int status, Bundle extras) {
+
+                        }
+
+                        @Override
+                        public void onProviderEnabled(String provider) {
+
                         }
 
                         @Override
