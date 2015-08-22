@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,9 +22,16 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import in.tosc.ghumo.fetchdata.CabApi;
 import in.tosc.ghumo.pojos.Auto;
+import in.tosc.ghumo.pojos.Cab;
+import in.tosc.ghumo.pojos.CabOperator;
 import in.tosc.ghumo.widgets.DividerItemDecoration;
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
 
 /**
  * Created by naman on 22/08/15.
@@ -57,6 +65,8 @@ public class RideAutoFragment extends Fragment {
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
+        setCurrentLocation();
+
         if (getArguments().getString(ACTION).equals(BROWSING_AUTO)) {
             //do auto stuff
             ArrayList<Auto> autoList =new ArrayList<>();
@@ -77,12 +87,49 @@ public class RideAutoFragment extends Fragment {
 
         } else {
             //do taxi stuff
+            CabApi api = ((GhumoApp) getActivity().getApplication()).getApiHandler();
+            final ArrayList<Cab> cabs = new ArrayList<>();
+            api.getCabs(28.5422f, 77.2692f, new Callback<List<CabOperator>>() {
+                @Override
+                public void success(List<CabOperator> cabOperators, Response response) {
+                    Log.d("dsf", cabOperators.size() + "");
+                    for (CabOperator cabOp : cabOperators) {
+                        ArrayList<CabOperator.CabOptions> cabOptions = cabOp.getOptions();
+                        for (CabOperator.CabOptions cabOpt : cabOptions) {
+                            try{
+                                cabs.add(new Cab(
+                                        cabOp.getOperatorName(),
+                                        cabOpt.getCategory(),
+                                        cabOpt.getTotalCost(),
+                                        cabOpt.getPerKmRate(),
+                                        cabOpt.getImageURL(),
+                                        cabOpt.getBaseFare(),
+                                        cabOpt.getMinDistance(),
+                                        cabOpt.getBaseDistance(),
+                                        cabOpt.getNearestCab().getTimeLimit(),
+                                        cabOpt.getNearestCab().getLat(),
+                                        cabOpt.getNearestCab().getLng()
+                                ));
+                            }catch(Exception e){
+                                e.printStackTrace();
+                            }
 
-            taxiAdapter = new TaxiAdapter(getActivity(),  new ArrayList());
-            recyclerView.setAdapter(taxiAdapter);
+                        }
+                    }
+
+                    Log.d("Taxis", cabs.toString());
+
+                    taxiAdapter = new TaxiAdapter(getActivity(),cabs);
+                    recyclerView.setAdapter(taxiAdapter);
+                }
+
+                @Override
+                public void failure(RetrofitError retrofitError) {
+
+                }
+            });
+
         }
-
-        setCurrentLocation();
 
         return rootView;
     }

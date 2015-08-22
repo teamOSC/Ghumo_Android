@@ -37,6 +37,7 @@ public class AutoAdapter extends RecyclerView.Adapter<AutoAdapter.ItemHolder> {
         Auto auto=arraylist.get(i);
         itemHolder.number.setText(auto.number);
         itemHolder.distance.setText(auto.distance);
+        itemHolder.position.setText(String.valueOf(i+1));
     }
 
     @Override
@@ -47,13 +48,14 @@ public class AutoAdapter extends RecyclerView.Adapter<AutoAdapter.ItemHolder> {
 
     public class ItemHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        protected TextView number,distance;
+        protected TextView number,distance,position;
 
         public ItemHolder(View view) {
             super(view);
 
             number=(TextView) view.findViewById(R.id.number);
             distance=(TextView) view.findViewById(R.id.distance);
+            position=(TextView) view.findViewById(R.id.position);
 
             view.setOnClickListener(this);
         }
