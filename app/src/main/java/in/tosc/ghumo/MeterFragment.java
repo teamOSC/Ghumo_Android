@@ -119,15 +119,14 @@ public class MeterFragment extends android.support.v4.app.Fragment{
             }
         });
 
-        changeDigit(timelyView11, 0);
-        changeDigit(timelyView12, 0);
-        changeDigit(timelyView13, 0);
-        changeDigit(timelyView14, 0);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resetDigits();
+            }
+        });
 
-        changeDigit(timelyView21, 0);
-        changeDigit(timelyView22, 0);
-        changeDigit(timelyView23, 0);
-        changeDigit(timelyView24, 0);
+        resetDigits();
 
         return rootView;
     }
@@ -190,15 +189,15 @@ public class MeterFragment extends android.support.v4.app.Fragment{
             Log.d("Location", "onReceive " + fareCharArray[0] + fareCharArray[1] + fareCharArray[3] + fareCharArray[4]);
             Log.d("Location", "onReceive " + distanceCharArray[0] + distanceCharArray[1] + distanceCharArray[3] + distanceCharArray[4]);
 
-            changeDigit(timelyView11, (distanceCharArray[0] - '0'));
-            changeDigit(timelyView12, (distanceCharArray[1] - '0'));
-            changeDigit(timelyView13, (distanceCharArray[3] - '0'));
-            changeDigit(timelyView14, (distanceCharArray[4] - '0'));
+            tv11((distanceCharArray[0] - '0'));
+            tv12((distanceCharArray[1] - '0'));
+            tv13((distanceCharArray[3] - '0'));
+            tv14((distanceCharArray[4] - '0'));
 
-            changeDigit(timelyView21, (fareCharArray[0] - '0'));
-            changeDigit(timelyView22, (fareCharArray[1] - '0'));
-            changeDigit(timelyView23, (fareCharArray[3] - '0'));
-            changeDigit(timelyView24, (fareCharArray[4] - '0'));
+            tv21((fareCharArray[0] - '0'));
+            tv22((fareCharArray[1] - '0'));
+            tv23((fareCharArray[3] - '0'));
+            tv24((fareCharArray[4] - '0'));
 
 
         }
@@ -206,8 +205,77 @@ public class MeterFragment extends android.support.v4.app.Fragment{
 
     public void changeDigit (TimelyView tv, int end) {
         ObjectAnimator obja = tv.animate(end);
-        obja.setDuration(300);
+        obja.setDuration(600);
         obja.start();
+    }
+
+    public void changeDigit (TimelyView tv, int start, int end) {
+        ObjectAnimator obja = tv.animate(start, end);
+        obja.setDuration(600);
+        obja.start();
+    }
+
+    public void tv11 (int a) {
+        if (a != distArr[0]) {
+            changeDigit(timelyView11, distArr[0], a);
+            distArr[0] = a;
+        }
+    }
+    public void tv12 (int a) {
+        if (a != distArr[1]) {
+            changeDigit(timelyView12, distArr[1], a);
+            distArr[1] = a;
+        }
+    }
+    public void tv13 (int a) {
+        if (a != distArr[2]) {
+            changeDigit(timelyView13, distArr[2], a);
+            distArr[2] = a;
+        }
+    }
+    public void tv14 (int a) {
+        if (a != distArr[3]) {
+            changeDigit(timelyView14, distArr[3], a);
+            distArr[3] = a;
+        }
+    }
+
+
+    public void tv21 (int a) {
+        if (a != fareArr[0]) {
+            changeDigit(timelyView21, fareArr[0], a);
+            fareArr[0] = a;
+        }
+    }
+    public void tv22 (int a) {
+        if (a != fareArr[1]) {
+            changeDigit(timelyView22, fareArr[1], a);
+            fareArr[1] = a;
+        }
+    }
+    public void tv23 (int a) {
+        if (a != fareArr[2]) {
+            changeDigit(timelyView23, fareArr[2], a);
+            fareArr[2] = a;
+        }
+    }
+    public void tv24 (int a) {
+        if (a != fareArr[3]) {
+            changeDigit(timelyView24, fareArr[3], a);
+            fareArr[3] = a;
+        }
+    }
+
+    public void resetDigits () {
+        changeDigit(timelyView11, 0);
+        changeDigit(timelyView12, 0);
+        changeDigit(timelyView13, 0);
+        changeDigit(timelyView14, 0);
+
+        changeDigit(timelyView21, 0);
+        changeDigit(timelyView22, 0);
+        changeDigit(timelyView23, 0);
+        changeDigit(timelyView24, 0);
     }
 
 
