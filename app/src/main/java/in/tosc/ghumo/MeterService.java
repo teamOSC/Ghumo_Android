@@ -46,15 +46,7 @@ public class MeterService extends Service {
                 }
                 distance += lastLocation.distanceTo(location) / 1000;
                 lastLocation = location;
-                Fare autoFare = new Fare(
-                        0,
-                        "Delhi",
-                        2,
-                        0,
-                        "Auto",
-                        9,
-                        25
-                );
+                Fare autoFare = ((GhumoApp) getApplication()).getFare();
                 float totalFare = FareOps.calcFare(distance, autoFare);
                 Log.d("Location", "Km = " + distance + " Fare = " + totalFare);
             }

@@ -1,6 +1,7 @@
 package in.tosc.ghumo.fetchdata;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.google.gson.Gson;
 
@@ -29,7 +30,7 @@ public class FareOps {
                     try {
                         fares.add(gson.fromJson((fareArr.getJSONObject(i)).toString(), Fare.class));
                     } catch (Exception e) {
-                        // Do fucking nothing
+                        Log.d("Son,", "you disappoint ",e);
                     }
                 }
             }

@@ -11,42 +11,48 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/meter_start"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+        <Spinner
+            android:id="@+id/spinner"
             android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:text="Start" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-        <Button
-            android:id="@+id/meter_stop"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:text="Stop" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/meter_reset"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:text="Reset" />
+
+            <Button
+                android:id="@+id/meter_start"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="Start" />
+
+            <Button
+                android:id="@+id/meter_stop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="Stop" />
+            <Button
+                android:id="@+id/meter_reset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="Reset" />
     </LinearLayout>
 
 
@@ -117,7 +123,6 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
-
     </LinearLayout>
 
 
@@ -130,7 +135,7 @@
         android:id="@+id/scrollingFrame"
         android:visibility="gone">
 
-       <in.tosc.ghumo.widgets.ScrollingImageView
+        <in.tosc.ghumo.widgets.ScrollingImageView
            android:id="@+id/scollingImage1"
             android:layout_width="match_parent"
             android:layout_height="100dp"
