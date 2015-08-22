@@ -46,6 +46,8 @@ public class RideAutoFragment extends Fragment {
     TaxiAdapter taxiAdapter;
     private GoogleMap mMap;
 
+    int locationShifted = 0;
+
     public static RideAutoFragment newInstance(String action) {
         RideAutoFragment fragment = new RideAutoFragment();
         Bundle args = new Bundle();
@@ -64,6 +66,8 @@ public class RideAutoFragment extends Fragment {
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        locationShifted = 0;
 
         setCurrentLocation();
 
@@ -159,11 +163,14 @@ public class RideAutoFragment extends Fragment {
                         @Override
                         public void onLocationChanged(Location location) {
 
-                            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
-                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(12.3f);
+                            if (locationShifted < 2) {
+                                CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
+                                CameraUpdate zoom = CameraUpdateFactory.zoomTo(12.3f);
 
-                            mMap.moveCamera(center);
-                            mMap.animateCamera(zoom);
+                                mMap.moveCamera(center);
+                                mMap.animateCamera(zoom);
+                                locationShifted++;
+                            }
                         }
 
                         @Override
@@ -191,11 +198,14 @@ public class RideAutoFragment extends Fragment {
                     1000, 0, new LocationListener() {
                         @Override
                         public void onLocationChanged(Location location) {
-                            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
-                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(12.3f);
+                            if (locationShifted < 2) {
+                                CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
+                                CameraUpdate zoom = CameraUpdateFactory.zoomTo(12.3f);
 
-                            mMap.moveCamera(center);
-                            mMap.animateCamera(zoom);
+                                mMap.moveCamera(center);
+                                mMap.animateCamera(zoom);
+                                locationShifted++;
+                            }
 
                         }
 
