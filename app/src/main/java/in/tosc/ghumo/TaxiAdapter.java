@@ -2,10 +2,14 @@ package in.tosc.ghumo;
 
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -22,6 +26,7 @@ public class TaxiAdapter extends RecyclerView.Adapter<TaxiAdapter.ItemHolder> {
     public TaxiAdapter(Activity context, ArrayList<Cab> arrayList) {
         this.mContext = context;
         this.arraylist = arrayList;
+        Log.d("lol",String.valueOf(arrayList.size()));
 
     }
 
@@ -34,7 +39,14 @@ public class TaxiAdapter extends RecyclerView.Adapter<TaxiAdapter.ItemHolder> {
 
     @Override
     public void onBindViewHolder(final ItemHolder itemHolder, int i) {
-
+        Cab cab=arraylist.get(i);
+        Picasso.with(mContext).load(cab.getImageURL()).into(itemHolder.image);
+        itemHolder.operator.setText(cab.getOperatorName());
+        itemHolder.category.setText(" - "+cab.getCategory());
+        String estimate = String.valueOf(cab.getTimeLimit());
+        String estimateminutes=estimate.substring(0,estimate.indexOf("."));
+        itemHolder.eta.setText(""+estimateminutes+"");
+        itemHolder.price.setText("₹"+String.valueOf(cab.getPerKmRate())+"/Km + ₹"+cab.getBaseFare()+" Base Fare");
     }
 
     @Override
@@ -45,13 +57,17 @@ public class TaxiAdapter extends RecyclerView.Adapter<TaxiAdapter.ItemHolder> {
 
     public class ItemHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        protected TextView number,distance;
+        protected TextView operator,category,price,eta;
+        protected ImageView image;
 
         public ItemHolder(View view) {
             super(view);
 
-            number=(TextView) view.findViewById(R.id.number);
-            distance=(TextView) view.findViewById(R.id.distance);
+            image=(ImageView) view.findViewById(R.id.image);
+            operator=(TextView) view.findViewById(R.id.operator);
+            category=(TextView) view.findViewById(R.id.category);
+            price=(TextView) view.findViewById(R.id.price);
+            eta=(TextView) view.findViewById(R.id.eta);
 
             view.setOnClickListener(this);
         }

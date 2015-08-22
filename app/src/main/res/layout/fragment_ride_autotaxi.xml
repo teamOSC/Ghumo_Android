@@ -9,7 +9,9 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:layout_margin="10dp" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"/>
 
 
     <android.support.v7.widget.RecyclerView
@@ -18,7 +20,7 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:paddingBottom="10dp"
-        android:paddingTop="5dp" />
+        android:paddingTop="10dp" />
 
 
 </LinearLayout>
