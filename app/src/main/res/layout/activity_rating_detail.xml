@@ -54,34 +54,52 @@
                     android:text="Age - 35 "
                     android:textSize="18sp"
                     android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UP 13C 7846"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
             </LinearLayout>
         </LinearLayout>
+
+
+        <RatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@style/Widget.AppCompat.RatingBar"
+            android:numStars="5"
+            android:stepSize="0.1"
+            android:isIndicator="true" />
 
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#33000000"
-        android:layout_margin="20dp"/>
+        android:background="#33000000"/>
 
-
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UP 13C 7846"
-        android:textSize="25sp"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/black"/>
+        android:hint="Enter comment"/>
+
     <RatingBar
-        android:id="@+id/rating"
+        android:id="@+id/rating_user"
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         style="@style/Widget.AppCompat.RatingBar"
         android:numStars="5"
-        android:paddingTop="15dp"
-        android:stepSize="0.1"
-        android:isIndicator="true" />
+        android:stepSize="0.1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"/>
 
 </LinearLayout>
