@@ -20,14 +20,22 @@ import java.util.ArrayList;
 import in.tosc.ghumo.fetchdata.FareOps;
 import in.tosc.ghumo.pojos.Fare;
 
+import in.tosc.ghumo.widgets.ScrollingImageView;
+
 public class MeterFragment extends android.support.v4.app.Fragment {
 
     Button start, stop, reset;
+    ScrollingImageView image1,image2;
+    View scrollingFrame;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_meter, container, false);
+
+        scrollingFrame=rootView.findViewById(R.id.scrollingFrame);
+        image1=(ScrollingImageView) rootView.findViewById(R.id.scollingImage1);
+        image2=(ScrollingImageView) rootView.findViewById(R.id.scollingImage2);
 
         Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
         Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner);
@@ -72,6 +80,7 @@ public class MeterFragment extends android.support.v4.app.Fragment {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startMovingAnimation();
                 getActivity().startService(meterIntent);
             }
         });
@@ -79,6 +88,7 @@ public class MeterFragment extends android.support.v4.app.Fragment {
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopMovingAnimation();
                 getActivity().stopService(meterIntent);
             }
         });
@@ -89,5 +99,17 @@ public class MeterFragment extends android.support.v4.app.Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+    }
+
+    private void startMovingAnimation(){
+        scrollingFrame.setVisibility(View.VISIBLE);
+        image1.start();
+        image2.start();
+    }
+
+    private void stopMovingAnimation(){
+        scrollingFrame.setVisibility(View.GONE);
+        image1.stop();
+        image2.stop();
     }
 }

@@ -59,18 +59,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_gravity="bottom">
+        android:layout_gravity="bottom"
+        android:id="@+id/scrollingFrame"
+        android:visibility="gone">
 
         <in.tosc.ghumo.widgets.ScrollingImageView
+           android:id="@+id/scollingImage1"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:layout_gravity="bottom"
             app:speed="1dp"
             app:src="@drawable/scrolling_background" />
 
         <in.tosc.ghumo.widgets.ScrollingImageView
+            android:id="@+id/scollingImage2"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:layout_gravity="bottom"
             app:speed="1.9dp"
             app:src="@drawable/scrolling_foreground" />

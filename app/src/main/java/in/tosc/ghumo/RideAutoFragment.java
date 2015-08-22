@@ -73,10 +73,11 @@ public class RideAutoFragment extends Fragment {
             autoList.add(new Auto("DL 1RL 2720","1.12 Kms"));
             autoList.add(new Auto("DL 1RP 0579","1.28 Kms"));
             autoList.add(new Auto("DL 1RT 0541","2.24 Kms"));
-            autoList.add(new Auto("DL 1RN 512.3f3","2.90 Kms"));
+            autoList.add(new Auto("DL 1RN 5127","2.90 Kms"));
             autoList.add(new Auto("DL 1RT 2823","3.52 Kms"));
             autoAdapter = new AutoAdapter(getActivity(),autoList);
             recyclerView.setAdapter(autoAdapter);
+            if (getActivity()!=null)
             recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL_LIST,R.drawable.item_divider_black));
 
             addToMap("28.542,77.259", "");
@@ -121,7 +122,12 @@ public class RideAutoFragment extends Fragment {
 
                     taxiAdapter = new TaxiAdapter(getActivity(),cabs);
                     recyclerView.setAdapter(taxiAdapter);
+                    if (getActivity()!=null)
                     recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL_LIST,R.drawable.item_divider_black));
+
+                    for (int i=0;i<cabs.size();i++){
+                        addToMap(String.valueOf(cabs.get(i).getLat())+","+String.valueOf(cabs.get(i).getLng()),"");
+                    }
                 }
 
                 @Override
