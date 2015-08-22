@@ -1,6 +1,6 @@
 [
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Ahmedabad",
     "min_dist": "1",
     "booking_fee": "",
@@ -36,7 +36,7 @@
     "min_fare": "10"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Bhubaneshwar",
     "min_dist": "0",
     "booking_fee": "",
@@ -63,7 +63,7 @@
     "min_fare": "25"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Davanagere",
     "min_dist": "2",
     "booking_fee": "",
@@ -81,7 +81,7 @@
     "min_fare": "25"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Dharwad",
     "min_dist": "1",
     "booking_fee": "",
@@ -117,7 +117,7 @@
     "min_fare": "17"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Indore",
     "min_dist": "1",
     "booking_fee": "",
@@ -135,7 +135,7 @@
     "min_fare": "25"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Kolkata",
     "min_dist": "2",
     "booking_fee": "",
@@ -216,7 +216,7 @@
     "min_fare": "25"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Satara",
     "min_dist": "1",
     "booking_fee": "",
@@ -225,7 +225,7 @@
     "min_fare": "20"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Surat",
     "min_dist": "0",
     "booking_fee": "",
@@ -243,16 +243,16 @@
     "min_fare": "20"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Udupi",
     "min_dist": "1",
     "booking_fee": "",
     "operator": "Auto",
-    "fare_per_km": ".1",
-    "min_fare": ".25"
+    "fare_per_km": "1",
+    "min_fare": "25"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Visakhapatnam",
     "min_dist": "1",
     "booking_fee": "",
@@ -432,7 +432,7 @@
     "min_fare": "22"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Nagpur",
     "min_dist": "1",
     "booking_fee": "",
@@ -531,7 +531,7 @@
     "min_fare": "100"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Ahmedabad",
     "min_dist": "4",
     "booking_fee": "",
@@ -594,7 +594,7 @@
     "min_fare": "12580"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Bengaluru",
     "min_dist": "4",
     "booking_fee": "",
@@ -612,7 +612,7 @@
     "min_fare": "100"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Chennai",
     "min_dist": "5",
     "booking_fee": "",
@@ -630,7 +630,7 @@
     "min_fare": "40"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Chennai",
     "min_dist": "4",
     "booking_fee": "",
@@ -657,7 +657,7 @@
     "min_fare": "12.5"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Delhi",
     "min_dist": "1",
     "booking_fee": "",
@@ -864,7 +864,7 @@
     "min_fare": "28"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Mysuru",
     "min_dist": "4",
     "booking_fee": "",
@@ -873,7 +873,7 @@
     "min_fare": "49"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Patna",
     "min_dist": "1",
     "booking_fee": "",
@@ -905,8 +905,8 @@
     "min_dist": "1",
     "booking_fee": "",
     "operator": "Easy Ride Cab",
-    "fare_per_km": ".1",
-    "min_fare": ".180"
+    "fare_per_km": "1",
+    "min_fare": "180"
   },
   {
     "waiting_charges": "120",
@@ -918,7 +918,7 @@
     "min_fare": "80"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Pune",
     "min_dist": "4",
     "booking_fee": "",
@@ -1071,7 +1071,7 @@
     "min_fare": "69"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Delhi",
     "min_dist": "1",
     "booking_fee": "",
@@ -1107,7 +1107,7 @@
     "min_fare": "75"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Delhi",
     "min_dist": "4",
     "booking_fee": "",
@@ -1143,7 +1143,7 @@
     "min_fare": "50"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Hyderabad",
     "min_dist": "4",
     "booking_fee": "",
@@ -1247,8 +1247,8 @@
     "min_dist": "1",
     "booking_fee": "",
     "operator": "Book My Cab",
-    "fare_per_km": ".1",
-    "min_fare": ".21"
+    "fare_per_km": "1",
+    "min_fare": "21"
   },
   {
     "waiting_charges": "120",
@@ -1332,7 +1332,7 @@
     "min_fare": "30"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Surat",
     "min_dist": "4",
     "booking_fee": "",
@@ -1341,7 +1341,7 @@
     "min_fare": "49"
   },
   {
-    "waiting_charges": "N",
+    "waiting_charges": "0",
     "city": "Vadodara",
     "min_dist": "4",
     "booking_fee": "",
