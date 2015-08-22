@@ -2,9 +2,8 @@ package in.tosc.ghumo;
 
 import android.app.Application;
 
-import com.google.android.gms.common.api.Api;
-
 import in.tosc.ghumo.fetchdata.CabApi;
+import in.tosc.ghumo.pojos.Fare;
 import retrofit.RestAdapter;
 
 /**
@@ -14,6 +13,24 @@ public class GhumoApp extends Application {
 
     private CabApi apiHandler;
     private RestAdapter restAdapter;
+    public Fare getFare() {
+        return fare;
+    }
+
+    public void setFare(Fare fare) {
+        this.fare = fare;
+    }
+
+    private Fare fare = new Fare(
+            0,
+            "Delhi",
+            2,
+            0,
+            "Auto",
+            9,
+            25
+    );
+
 
     @Override
     public void onCreate() {

@@ -26,6 +26,8 @@ import android.widget.Toast;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
+import in.tosc.ghumo.pojos.Fare;
+
 public class MainActivity extends AppCompatActivity {
 
     NavigationView navigationView;
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String MIME_TEXT_PLAIN = "text/plain";
     private NfcAdapter mNfcAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

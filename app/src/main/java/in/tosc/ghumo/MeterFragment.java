@@ -9,7 +9,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+
+import in.tosc.ghumo.fetchdata.FareOps;
+import in.tosc.ghumo.pojos.Fare;
 
 public class MeterFragment extends android.support.v4.app.Fragment {
 
@@ -21,7 +29,26 @@ public class MeterFragment extends android.support.v4.app.Fragment {
         View rootView = inflater.inflate(R.layout.fragment_meter, container, false);
 
         Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
+        Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner);
+
+        final ArrayList<Fare> list = FareOps.getFares(getActivity());
+        ArrayList<String> fareString = new ArrayList<>();
+
+        for(Fare fare : list){
+            fareString.add(fare.getCity() + ", " + fare.getOperator());
+        }
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>
+                (getActivity(), android.R.layout.select_dialog_item, fareString);
+        spinner.setAdapter(adapter);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+
+        spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                ((GhumoApp) getActivity().getApplication()).setFare(list.get(i));
+            }
+        });
 
         final ActionBar ab = ((AppCompatActivity) getActivity()).getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.ic_menu);
