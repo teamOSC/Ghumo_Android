@@ -16,7 +16,9 @@ import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
 
@@ -62,6 +64,7 @@ public class RideAutoFragment extends Fragment {
         }
 
         setCurrentLocation();
+        addToMap("28.6139,77.2090","");
         return rootView;
     }
 
@@ -95,5 +98,26 @@ public class RideAutoFragment extends Fragment {
         } catch (SecurityException e) {
             e.printStackTrace();
         }
+    }
+
+    private void addToMap(String latlong,String title){
+
+        MarkerOptions markerOptions;
+        LatLng position;
+        String lati=latlong.substring(0,latlong.indexOf(",")),longi=latlong.substring(latlong.indexOf(",")+1,latlong.length());
+
+        markerOptions = new MarkerOptions();
+
+        position = new LatLng(Double.parseDouble(lati), Double.parseDouble(longi));
+        markerOptions.position(position);
+        markerOptions.title(title);
+        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_taxi_map));
+        mMap.addMarker(markerOptions);
+
+        CameraUpdate cameraPosition = CameraUpdateFactory.newLatLngZoom(position, 6.0f);
+
+
+        mMap.animateCamera(cameraPosition);
+
     }
 }
