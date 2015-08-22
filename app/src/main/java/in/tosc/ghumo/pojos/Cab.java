@@ -108,6 +108,9 @@ public class Cab {
     }
 
     public float getLat() {
+        if (lat == 0) {
+            return 28.545f;
+        }
         return lat;
     }
 
@@ -116,6 +119,9 @@ public class Cab {
     }
 
     public float getLng() {
+        if (lng == 0) {
+            return 77.2735f;
+        }
         return lng;
     }
 

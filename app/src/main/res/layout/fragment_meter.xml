@@ -148,6 +148,24 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_marginBottom="75dp"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/emergency"
+            android:gravity="center"
+            android:text="EMERGENCY"
+            android:padding="5dp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/holo_red_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
 
 
     <FrameLayout

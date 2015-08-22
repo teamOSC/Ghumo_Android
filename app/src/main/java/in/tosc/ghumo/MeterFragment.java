@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.ActionBar;
@@ -62,6 +63,16 @@ public class MeterFragment extends android.support.v4.app.Fragment{
         timelyView22=(TimelyView) rootView.findViewById(R.id.timelyView22);
         timelyView23=(TimelyView) rootView.findViewById(R.id.timelyView23);
         timelyView24=(TimelyView) rootView.findViewById(R.id.timelyView24);
+
+        Button emergency = (Button) rootView.findViewById(R.id.emergency);
+        emergency.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Intent.ACTION_DIAL);
+                i.setData(Uri.parse("tel:100"));
+                startActivity(i);
+            }
+        });
 
         Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
         Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner);
