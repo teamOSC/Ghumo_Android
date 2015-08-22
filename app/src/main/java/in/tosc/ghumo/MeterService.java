@@ -3,14 +3,26 @@ package in.tosc.ghumo;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 
+import in.tosc.ghumo.fetchdata.FareOps;
+import in.tosc.ghumo.pojos.Fare;
+
 public class MeterService extends Service {
+    public LocationManager locationManager;
+    public Location lastLocation = null;
+    public Float distance = (float) 0.0, finalKilometers = (float) 0, finalFare = (float) 0;
+    public Criteria criteria;
+    LocationListener locLis;
+
     public MeterService() {
     }
 
@@ -20,64 +32,80 @@ public class MeterService extends Service {
     }
 
     @Override
-    public void onStart(Intent intent, int startId) {
-        super.onStart(intent, startId);
-        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        criteria = new Criteria();
+        criteria.setAccuracy(Criteria.ACCURACY_FINE);
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        locLis = new LocationListener() {
+            @Override
+            public void onLocationChanged(Location location) {
+                Log.d("Location", location.getLatitude() + "  " + location.getLongitude());
+                if (lastLocation == null) {
+                    lastLocation = location;
+                }
+                distance += lastLocation.distanceTo(location) / 1000;
+                lastLocation = location;
+                Fare autoFare = new Fare(
+                        0,
+                        "Delhi",
+                        2,
+                        0,
+                        "Auto",
+                        9,
+                        25
+                );
+                float totalFare = FareOps.calcFare(distance, autoFare);
+                Log.d("Location", "Km = " + distance + " Fare = " + totalFare);
+            }
+
+            @Override
+            public void onStatusChanged(String provider, int status, Bundle extras) {
+
+            }
+
+            @Override
+            public void onProviderEnabled(String provider) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (checkSelfPermission(android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                        // TODO: Consider calling
+                        //    public void requestPermissions(@NonNull String[] permissions, int requestCode)
+                        // here to request the missing permissions, and then overriding
+                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                        //                                          int[] grantResults)
+                        // to handle the case where the user grants the permission. See the documentation
+                        // for Activity#requestPermissions for more details.
+                        return;
+                    }
+                }
+
+                locationManager.requestLocationUpdates(locationManager.getBestProvider(criteria, false), 600, 50, this);
+            }
+
+            @Override
+            public void onProviderDisabled(String provider) {
+
+            }
+        };
 
         try {
-            locationManager.requestLocationUpdates(
-                    LocationManager.NETWORK_PROVIDER, 1000, 0,
-                    new LocationListener() {
-                        @Override
-                        public void onLocationChanged(Location location) {
-                            Log.d("Location", location.toString());
-                        }
-
-                        @Override
-                        public void onStatusChanged(String provider, int status, Bundle extras) {
-
-                        }
-
-                        @Override
-                        public void onProviderEnabled(String provider) {
-
-                        }
-
-                        @Override
-                        public void onProviderDisabled(String provider) {
-
-                        }
-                    });
+            locationManager.requestLocationUpdates(locationManager.getBestProvider(criteria, false), 600, 50, locLis);
         } catch (SecurityException e) {
             e.printStackTrace();
         }
 
+        return START_STICKY;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
         try {
-
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-                    1000, 0, new LocationListener() {
-                        @Override
-                        public void onLocationChanged(Location location) {
-                            Log.d("Location", location.toString());
-                        }
-
-                        @Override
-                        public void onStatusChanged(String provider, int status, Bundle extras) {
-
-                        }
-
-                        @Override
-                        public void onProviderEnabled(String provider) {
-
-                        }
-
-                        @Override
-                        public void onProviderDisabled(String provider) {
-
-                        }
-                    });
-        } catch (SecurityException e) {
-            e.printStackTrace();
+            locationManager.removeUpdates(locLis);
+        } catch (Exception e ) {
+            //Nothing to do here
         }
     }
+
+
 }

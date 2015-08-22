@@ -18,7 +18,7 @@ import in.tosc.ghumo.pojos.Fare;
  */
 public class FareOps {
 
-    public ArrayList<Fare> getFares(Context ctx) {
+    public static ArrayList<Fare> getFares(Context ctx) {
         ArrayList<Fare> fares = new ArrayList<>();
         String jsonString = getJsonFromAssets("fares.json", ctx);
         try {
@@ -33,7 +33,7 @@ public class FareOps {
         return fares;
     }
 
-    public float calcFare(float kiloMeters, Fare fare) {
+    public static float calcFare(float kiloMeters, Fare fare) {
         float totalFare = 0;
         totalFare += fare.getBooking_fee();
         totalFare += fare.getMin_fare();
@@ -46,7 +46,7 @@ public class FareOps {
         return totalFare;
     }
 
-    public String getJsonFromAssets (String assetFileName, Context c) {
+    public static String getJsonFromAssets (String assetFileName, Context c) {
         String json = null;
         try {
             InputStream is = c.getAssets().open(assetFileName);
