@@ -2,10 +2,6 @@ package in.tosc.ghumo;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
@@ -114,81 +110,11 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
         });
 
 
-        CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(28.54, 77.27));
+        CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(28.5422f, 77.2692f));
         CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
 
         map.moveCamera(center);
         map.animateCamera(zoom);
-
-        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-
-        try {
-            locationManager.requestLocationUpdates(
-                    LocationManager.NETWORK_PROVIDER, 1000, 0,
-                    new LocationListener() {
-                        @Override
-                        public void onLocationChanged(Location location) {
-
-                            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
-                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
-
-                            map.moveCamera(center);
-                            map.animateCamera(zoom);
-                        }
-
-                        @Override
-                        public void onStatusChanged(String provider, int status, Bundle extras) {
-
-                        }
-
-                        @Override
-                        public void onProviderEnabled(String provider) {
-
-                        }
-
-                        @Override
-                        public void onProviderDisabled(String provider) {
-
-                        }
-                    });
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        }
-
-        try {
-
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-                    1000, 0, new LocationListener() {
-                        @Override
-                        public void onLocationChanged(Location location) {
-                            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
-                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
-
-                            map.moveCamera(center);
-                            map.animateCamera(zoom);
-
-                        }
-
-                        @Override
-                        public void onStatusChanged(String provider, int status, Bundle extras) {
-
-                        }
-
-                        @Override
-                        public void onProviderEnabled(String provider) {
-
-                        }
-
-                        @Override
-                        public void onProviderDisabled(String provider) {
-
-                        }
-                    });
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        }
-
-
 
         /*
         * Adds auto complete adapter to both auto complete
