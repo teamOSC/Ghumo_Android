@@ -3,7 +3,6 @@ package in.tosc.ghumo;
 import android.content.Context;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -11,6 +10,8 @@ import org.json.JSONException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+
+import in.tosc.ghumo.pojos.Fare;
 
 /**
  * Created by championswimmer on 22/8/15.

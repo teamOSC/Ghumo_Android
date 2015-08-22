@@ -1,4 +1,4 @@
-package in.tosc.ghumo;
+package in.tosc.ghumo.pojos;
 
 /**
  * Created by championswimmer on 22/8/15.
