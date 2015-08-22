@@ -1,12 +1,12 @@
 package in.tosc.ghumo;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -15,7 +15,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.directions.route.AbstractRouting;
@@ -42,6 +44,12 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
+import java.util.ArrayList;
+
+import in.tosc.ghumo.fetchdata.FareOps;
+import in.tosc.ghumo.pojos.Fare;
+import in.tosc.ghumo.widgets.DividerItemDecoration;
+
 /**
  * Created by naman on 22/08/15.
  */
@@ -60,6 +68,8 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
     private PlaceAutoCompleteAdapter mAdapter;
     private ProgressDialog progressDialog;
     private Polyline polyline;
+    private Button estimate;
+    private CardView cardView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -68,6 +78,8 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
         starting = (AutoCompleteTextView) rootView.findViewById(R.id.start);
         destination = (AutoCompleteTextView) rootView.findViewById(R.id.destination);
         send = (ImageView) rootView.findViewById(R.id.send);
+        estimate = (Button) rootView.findViewById(R.id.estimate);
+        cardView = (CardView) rootView.findViewById(R.id.cardview);
 
         mGoogleApiClient = new GoogleApiClient.Builder(getActivity())
                 .addApi(Places.GEO_DATA_API)
@@ -102,81 +114,11 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
         });
 
 
-        CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(28.54, 77.27));
+        CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(28.5422f, 77.2692f));
         CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
 
         map.moveCamera(center);
         map.animateCamera(zoom);
-
-        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-
-        try {
-            locationManager.requestLocationUpdates(
-                    LocationManager.NETWORK_PROVIDER, 1000, 0,
-                    new LocationListener() {
-                        @Override
-                        public void onLocationChanged(Location location) {
-
-                            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
-                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
-
-                            map.moveCamera(center);
-                            map.animateCamera(zoom);
-                        }
-
-                        @Override
-                        public void onStatusChanged(String provider, int status, Bundle extras) {
-
-                        }
-
-                        @Override
-                        public void onProviderEnabled(String provider) {
-
-                        }
-
-                        @Override
-                        public void onProviderDisabled(String provider) {
-
-                        }
-                    });
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        }
-
-        try {
-
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-                    1000, 0, new LocationListener() {
-                        @Override
-                        public void onLocationChanged(Location location) {
-                            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
-                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
-
-                            map.moveCamera(center);
-                            map.animateCamera(zoom);
-
-                        }
-
-                        @Override
-                        public void onStatusChanged(String provider, int status, Bundle extras) {
-
-                        }
-
-                        @Override
-                        public void onProviderEnabled(String provider) {
-
-                        }
-
-                        @Override
-                        public void onProviderDisabled(String provider) {
-
-                        }
-                    });
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        }
-
-
 
         /*
         * Adds auto complete adapter to both auto complete
@@ -354,7 +296,7 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
     }
 
     @Override
-    public void onRoutingSuccess(PolylineOptions mPolyOptions, Route route) {
+    public void onRoutingSuccess(PolylineOptions mPolyOptions, final Route route) {
         progressDialog.dismiss();
         CameraUpdate center = CameraUpdateFactory.newLatLng(start);
         CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
@@ -384,6 +326,26 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
         options.position(end);
         options.icon(BitmapDescriptorFactory.fromResource(R.drawable.end_green));
         map.addMarker(options);
+
+        cardView.setVisibility(View.GONE);
+        estimate.setVisibility(View.VISIBLE);
+        estimate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Dialog dialog = new Dialog(getActivity());
+                dialog.setContentView(R.layout.dialog);
+                dialog.setTitle("Estimate Details");
+                dialog.setCancelable(true);
+                RecyclerView recyclerView;
+                recyclerView = (RecyclerView) dialog.findViewById(R.id.recycler_view);
+                recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+                recyclerView.setAdapter(new DialogAdapter(route));
+                recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST, R.drawable.item_divider_black));
+                dialog.show();
+            }
+        });
+
+
     }
 
     @Override
@@ -404,5 +366,47 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
     @Override
     public void onConnectionSuspended(int i) {
 
+    }
+
+    public class DialogAdapter extends RecyclerView.Adapter<DialogAdapter.ViewHolder>{
+
+        private Route route;
+        private ArrayList<Fare> list = FareOps.getFares(getActivity());
+
+        public DialogAdapter(Route abc){
+            route = abc;
+        }
+
+        @Override
+        public DialogAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_dialog, null);
+            DialogAdapter.ViewHolder ml = new ViewHolder(v);
+            return ml;
+        }
+
+        @Override
+        public void onBindViewHolder(DialogAdapter.ViewHolder holder, int position) {
+
+            holder.operator.setText(list.get(position).getOperator());
+            holder.estimate.setText(String.valueOf(FareOps.calcFare((Float.valueOf(String.valueOf(route.getLength()/1000))), list.get(position))));
+
+        }
+
+        @Override
+        public int getItemCount() {
+            return list.size();
+        }
+
+        public class ViewHolder extends RecyclerView.ViewHolder{
+
+            private TextView operator;
+            private TextView estimate;
+
+            public ViewHolder(View itemView) {
+                super(itemView);
+                operator = (TextView) itemView.findViewById(R.id.operator);
+                estimate = (TextView) itemView.findViewById(R.id.eta);
+            }
+        }
     }
 }
