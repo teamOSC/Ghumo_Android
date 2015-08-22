@@ -22,6 +22,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
 
+import in.tosc.ghumo.pojos.Auto;
+
 /**
  * Created by naman on 22/08/15.
  */
@@ -31,7 +33,8 @@ public class RideAutoFragment extends Fragment {
     public static final String BROWSING_AUTO = "browsing_auto";
     private static final String ACTION = "action";
     RecyclerView recyclerView;
-    AutoTaxiAdapter adapter;
+    AutoAdapter autoAdapter;
+    TaxiAdapter taxiAdapter;
     private GoogleMap mMap;
 
     public static RideAutoFragment newInstance(String action) {
@@ -55,12 +58,18 @@ public class RideAutoFragment extends Fragment {
 
         if (getArguments().getString(ACTION).equals(BROWSING_AUTO)) {
             //do auto stuff
-            adapter = new AutoTaxiAdapter(getActivity(), R.layout.item_ride_auto, new ArrayList());
-            recyclerView.setAdapter(adapter);
+            ArrayList<Auto> autoList =new ArrayList<>();
+            autoList.add(new Auto("DL 3B 6465","3 Kms"));
+            autoList.add(new Auto("DL 3B 6465","3 Kms"));
+            autoList.add(new Auto("DL 3B 6465","3 Kms"));
+            autoList.add(new Auto("DL 3B 6465","3 Kms"));
+            autoAdapter = new AutoAdapter(getActivity(),autoList);
+            recyclerView.setAdapter(autoAdapter);
         } else {
             //do taxi stuff
-            adapter = new AutoTaxiAdapter(getActivity(), R.layout.item_ride_taxi, new ArrayList());
-            recyclerView.setAdapter(adapter);
+
+            taxiAdapter = new TaxiAdapter(getActivity(),  new ArrayList());
+            recyclerView.setAdapter(taxiAdapter);
         }
 
         setCurrentLocation();
