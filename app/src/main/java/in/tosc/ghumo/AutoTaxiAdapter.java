@@ -12,16 +12,16 @@ import java.util.ArrayList;
 /**
  * Created by naman on 22/08/15.
  */
-public class AutoTaxiAdapter extends RecyclerView.Adapter<AutoTaxiAdapter.ItemHolder>  {
+public class AutoTaxiAdapter extends RecyclerView.Adapter<AutoTaxiAdapter.ItemHolder> {
 
     private ArrayList arraylist;
     private Activity mContext;
     private int layoutID;
 
-    public AutoTaxiAdapter(Activity context, int layoutResID,ArrayList arrayList) {
+    public AutoTaxiAdapter(Activity context, int layoutResID, ArrayList arrayList) {
         this.mContext = context;
-        this.layoutID=layoutResID;
-        this.arraylist=arrayList;
+        this.layoutID = layoutResID;
+        this.arraylist = arrayList;
 
     }
 
@@ -52,6 +52,7 @@ public class AutoTaxiAdapter extends RecyclerView.Adapter<AutoTaxiAdapter.ItemHo
 
             number=(TextView) view.findViewById(R.id.number);
             distance=(TextView) view.findViewById(R.id.distance);
+
             view.setOnClickListener(this);
         }
 
@@ -61,7 +62,6 @@ public class AutoTaxiAdapter extends RecyclerView.Adapter<AutoTaxiAdapter.ItemHo
         }
 
     }
-
 
 
 }

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="250dp"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ghoomo"
         android:layout_gravity="bottom|left"
-        android:textSize="20sp"
         android:padding="10dp"
-        android:textColor="@android:color/white"/>
+        android:text="Ghoomo"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
 </FrameLayout>

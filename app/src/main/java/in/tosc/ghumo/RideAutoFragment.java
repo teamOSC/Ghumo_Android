@@ -25,19 +25,17 @@ import java.util.ArrayList;
  */
 public class RideAutoFragment extends Fragment {
 
-    private static final String ACTION ="action";
-    public static final String BROWSING_TAXI="browsing_taxi";
-    public static final String BROWSING_AUTO="browsing_auto";
-
-    private GoogleMap mMap;
-
+    public static final String BROWSING_TAXI = "browsing_taxi";
+    public static final String BROWSING_AUTO = "browsing_auto";
+    private static final String ACTION = "action";
     RecyclerView recyclerView;
     AutoTaxiAdapter adapter;
+    private GoogleMap mMap;
 
-    public static RideAutoFragment newInstance(String action){
-        RideAutoFragment fragment=new RideAutoFragment();
+    public static RideAutoFragment newInstance(String action) {
+        RideAutoFragment fragment = new RideAutoFragment();
         Bundle args = new Bundle();
-        args.putString(ACTION,action);
+        args.putString(ACTION, action);
         fragment.setArguments(args);
         return fragment;
 
@@ -50,16 +48,16 @@ public class RideAutoFragment extends Fragment {
 
         mMap = ((SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map)).getMap();
 
-        recyclerView=(RecyclerView) rootView.findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        if (getArguments().getString(ACTION).equals(BROWSING_AUTO)){
+        if (getArguments().getString(ACTION).equals(BROWSING_AUTO)) {
             //do auto stuff
-            adapter=new AutoTaxiAdapter(getActivity(),R.layout.item_ride_auto,new ArrayList());
+            adapter = new AutoTaxiAdapter(getActivity(), R.layout.item_ride_auto, new ArrayList());
             recyclerView.setAdapter(adapter);
         } else {
             //do taxi stuff
-            adapter=new AutoTaxiAdapter(getActivity(),R.layout.item_ride_taxi,new ArrayList());
+            adapter = new AutoTaxiAdapter(getActivity(), R.layout.item_ride_taxi, new ArrayList());
             recyclerView.setAdapter(adapter);
         }
 
@@ -68,8 +66,7 @@ public class RideAutoFragment extends Fragment {
     }
 
 
-
-    private void setCurrentLocation(){
+    private void setCurrentLocation() {
         try {
             LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
@@ -81,18 +78,21 @@ public class RideAutoFragment extends Fragment {
                             mMap.moveCamera(center);
                             mMap.animateCamera(zoom);
                         }
+
                         @Override
                         public void onStatusChanged(String provider, int status, Bundle extras) {
                         }
+
                         @Override
                         public void onProviderEnabled(String provider) {
                         }
+
                         @Override
                         public void onProviderDisabled(String provider) {
 
                         }
                     });
-        } catch (SecurityException e){
+        } catch (SecurityException e) {
             e.printStackTrace();
         }
     }
