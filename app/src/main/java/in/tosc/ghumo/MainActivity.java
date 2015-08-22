@@ -89,6 +89,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onBackPressed(){
+        if (!drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            if (!navigationView.getMenu().findItem(R.id.nav_ride).isChecked()) {
+                navigationView.getMenu().findItem(R.id.nav_ride).setChecked(true);
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new RideFragment()).commit();
+            } else
+                super.onBackPressed();
+        } else drawerLayout.closeDrawer(GravityCompat.START);
+
+    }
+
+    @Override
     protected void onNewIntent(Intent intent) {
         handleIntent(intent);
     }
@@ -254,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String s) {
             if (s != null) {
                 if(desiredPosition){
-                    //TODO
+                    startActivity(new Intent(getApplicationContext(), RatingDetailActivity.class));
                 }
             }
         }

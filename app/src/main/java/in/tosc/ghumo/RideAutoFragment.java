@@ -16,7 +16,9 @@ import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
 
@@ -62,29 +64,43 @@ public class RideAutoFragment extends Fragment {
         }
 
         setCurrentLocation();
+        addToMap("28.6139,77.2090","");
         return rootView;
     }
 
 
     private void setCurrentLocation() {
+
+        CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(28.54, 77.27));
+        CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
+
+        mMap.moveCamera(center);
+        mMap.animateCamera(zoom);
+
+        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+
         try {
-            LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-                    3000, 0, new LocationListener() {
+            locationManager.requestLocationUpdates(
+                    LocationManager.NETWORK_PROVIDER, 1000, 0,
+                    new LocationListener() {
                         @Override
                         public void onLocationChanged(Location location) {
+
                             CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
                             CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
+
                             mMap.moveCamera(center);
                             mMap.animateCamera(zoom);
                         }
 
                         @Override
                         public void onStatusChanged(String provider, int status, Bundle extras) {
+
                         }
 
                         @Override
                         public void onProviderEnabled(String provider) {
+
                         }
 
                         @Override
@@ -95,5 +111,59 @@ public class RideAutoFragment extends Fragment {
         } catch (SecurityException e) {
             e.printStackTrace();
         }
+
+        try {
+
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
+                    1000, 0, new LocationListener() {
+                        @Override
+                        public void onLocationChanged(Location location) {
+                            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
+                            CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
+
+                            mMap.moveCamera(center);
+                            mMap.animateCamera(zoom);
+
+                        }
+
+                        @Override
+                        public void onStatusChanged(String provider, int status, Bundle extras) {
+
+                        }
+
+                        @Override
+                        public void onProviderEnabled(String provider) {
+
+                        }
+
+                        @Override
+                        public void onProviderDisabled(String provider) {
+
+                        }
+                    });
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void addToMap(String latlong,String title){
+
+        MarkerOptions markerOptions;
+        LatLng position;
+        String lati=latlong.substring(0,latlong.indexOf(",")),longi=latlong.substring(latlong.indexOf(",")+1,latlong.length());
+
+        markerOptions = new MarkerOptions();
+
+        position = new LatLng(Double.parseDouble(lati), Double.parseDouble(longi));
+        markerOptions.position(position);
+        markerOptions.title(title);
+        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_taxi_map));
+        mMap.addMarker(markerOptions);
+
+        CameraUpdate cameraPosition = CameraUpdateFactory.newLatLngZoom(position, 6.0f);
+
+
+        mMap.animateCamera(cameraPosition);
+
     }
 }
