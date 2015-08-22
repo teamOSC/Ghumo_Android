@@ -1,5 +1,7 @@
 package in.tosc.ghumo.pojos;
 
+import java.util.Random;
+
 /**
  * Created by championswimmer on 22/8/15.
  */
@@ -95,7 +97,10 @@ public class Cab {
     }
 
     public float getTimeLimit() {
-        return timeLimit;
+
+        Random r = new Random();
+
+        return r.nextInt(15 - 2) + 2;
     }
 
     public void setTimeLimit(float timeLimit) {
