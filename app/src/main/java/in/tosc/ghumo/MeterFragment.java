@@ -18,12 +18,19 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.TranslateAnimation;
+import android.widget.Button;
+import android.widget.ImageView;
+
+import com.github.adnansm.timelytextview.TimelyView;
+import com.nineoldandroids.animation.ObjectAnimator;
+
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
+import java.text.DecimalFormat;
 import com.github.adnansm.timelytextview.TimelyView;
 
 import java.util.ArrayList;
@@ -40,6 +47,9 @@ public class MeterFragment extends android.support.v4.app.Fragment{
     ImageView van;
     TimelyView timelyView11,timelyView12,timelyView13,timelyView14,timelyView21,timelyView22,timelyView23,timelyView24;
     com.nineoldandroids.animation.ObjectAnimator objectAnimator;
+
+    int[] distArr = new int[] {0,0,0,0};
+    int[] fareArr = new int[] {0,0,0,0};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -115,15 +125,15 @@ public class MeterFragment extends android.support.v4.app.Fragment{
             }
         });
 
-        Handler handler=new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                objectAnimator=timelyView11.animate(8,9);
-                objectAnimator.setDuration(1000);
-                objectAnimator.start();
-            }
-        },2000);
+        changeDigit(timelyView11, 0);
+        changeDigit(timelyView12, 0);
+        changeDigit(timelyView13, 0);
+        changeDigit(timelyView14, 0);
+
+        changeDigit(timelyView21, 0);
+        changeDigit(timelyView22, 0);
+        changeDigit(timelyView23, 0);
+        changeDigit(timelyView24, 0);
 
         return rootView;
     }
@@ -177,8 +187,34 @@ public class MeterFragment extends android.support.v4.app.Fragment{
             Float distance = intent.getFloatExtra("distance", 0);
             Float fare = intent.getFloatExtra("fare", 0);
             Log.d("Location", "Km = " + distance + " Fare = " + fare);
+
+            DecimalFormat df = new DecimalFormat("00.00");
+            Log.d("Location", "Km = " + (df.format(distance)) + " Fare = " + (df.format(fare)));
+            char[] fareCharArray = (df.format(fare)).toCharArray();
+            char[] distanceCharArray = (df.format(distance)).toCharArray();
+
+            Log.d("Location", "onReceive " + fareCharArray[0] + fareCharArray[1] + fareCharArray[3] + fareCharArray[4]);
+            Log.d("Location", "onReceive " + distanceCharArray[0] + distanceCharArray[1] + distanceCharArray[3] + distanceCharArray[4]);
+
+            changeDigit(timelyView11, (distanceCharArray[0] - '0'));
+            changeDigit(timelyView12, (distanceCharArray[1] - '0'));
+            changeDigit(timelyView13, (distanceCharArray[3] - '0'));
+            changeDigit(timelyView14, (distanceCharArray[4] - '0'));
+
+            changeDigit(timelyView21, (fareCharArray[0] - '0'));
+            changeDigit(timelyView22, (fareCharArray[1] - '0'));
+            changeDigit(timelyView23, (fareCharArray[3] - '0'));
+            changeDigit(timelyView24, (fareCharArray[4] - '0'));
+
+
         }
     };
+
+    public void changeDigit (TimelyView tv, int end) {
+        ObjectAnimator obja = tv.animate(end);
+        obja.setDuration(300);
+        obja.start();
+    }
 
 
 }
