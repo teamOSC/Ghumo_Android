@@ -102,7 +102,7 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
         });
 
 
-        CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(18.013610, -77.498803));
+        CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(28.54, 77.27));
         CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
 
         map.moveCamera(center);
@@ -112,7 +112,7 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
 
         try {
             locationManager.requestLocationUpdates(
-                    LocationManager.NETWORK_PROVIDER, 5000, 0,
+                    LocationManager.NETWORK_PROVIDER, 1000, 0,
                     new LocationListener() {
                         @Override
                         public void onLocationChanged(Location location) {
@@ -146,7 +146,7 @@ public class DirectionsFragment extends Fragment implements RoutingListener, Goo
         try {
 
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-                    3000, 0, new LocationListener() {
+                    1000, 0, new LocationListener() {
                         @Override
                         public void onLocationChanged(Location location) {
                             CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
