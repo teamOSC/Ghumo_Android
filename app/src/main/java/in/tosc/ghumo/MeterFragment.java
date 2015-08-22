@@ -14,20 +14,18 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.TranslateAnimation;
-import android.widget.Button;
-import android.widget.ImageView;
-
-import com.github.adnansm.timelytextview.TimelyView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
+
+import com.github.adnansm.timelytextview.TimelyView;
 
 import java.util.ArrayList;
 
 import in.tosc.ghumo.fetchdata.FareOps;
 import in.tosc.ghumo.pojos.Fare;
-
 import in.tosc.ghumo.widgets.ScrollingImageView;
 
 public class MeterFragment extends android.support.v4.app.Fragment {
